@@ -1,6 +1,7 @@
 <html>
-<body>
-<p style="text-align:center;">TEAM-H'S HOMEPAGE WITH KKNOCK</p>
-
-</body>
+  <body>
+    <span style = " font-size:3em;  color: blue;">
+    <p style="text-align:center;">TEAM-H'S HOMEPAGE WITH KKNOCK</p>
+    </span>
+  </body>
 </html>
