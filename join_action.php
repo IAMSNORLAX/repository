@@ -3,7 +3,7 @@
   ini_set( "display_errors", 1 );
 
 <?php
-    $connect = mysqli_connect('localhost','team-h','Dnjswndbf3.14','DB_BOARD')
+    $connect = mysqli_connect('127.0.0.1','team-h','Dnjswndbf3.14','DB_BOARD')
 
     $id=$_POST['id'];
     $pw=$_POST['pw'];
