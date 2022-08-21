@@ -1,5 +1,5 @@
 <?php
-    $connect = mysqli_connect('localhost','team-h','Dnjswndbf3.14','DB_BOARD') or die("fail");
+    $connect = mysqli_connect('localhost','team-h','Dnjswndbf3.14','member') or die("fail");
 
     $id=$_POST['id'];
     $pw=$_POST['pw'];
