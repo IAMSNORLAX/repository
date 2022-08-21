@@ -1,5 +1,5 @@
 <?php
-    $connect = mysqli_connect(20.249.82.171,Team-H,179503,DB_BOARD) or die("fail");
+    $connect = mysqli_connect(20.249.82.171,Team-H,179503,DB_BOARD,1853) or die("fail");
 
     $id=$_POST['id'];
     $pw=$_POST['pw'];
