@@ -28,15 +28,15 @@
 
 <div id="main">
     <div align='center'> <!--중앙 배열-->
-    <span>LOGIN</span> <!--로그인 글자 나타나는 것-->
+    <span>L O G I N</span> <!--로그인 글자 나타나는 것-->
 
     <form method='get' action='login.php'>  <!--php 로그인 할수 있도록 -->
-              <p>ID: <input name="id" type="text"></p>
-              <p>PW: <input name="pw" type="password"></p>
+              <p>I D: <input name="id" type="text"></p>
+              <p>P W: <input name="pw" type="password"></p>
               <input type="submit" value="LOGIN">
     </form>
     <br />
-      <button type="button" class="navyBtn" onClick="location.href='join.php'"> SIGN UP </button>
+      <button type="button" class="navyBtn" onClick="location.href='join.php'"> S I G N U P </button>
     </div>
  </div>
   
