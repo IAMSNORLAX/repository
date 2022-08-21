@@ -36,7 +36,7 @@
               <input type="submit" value="LOGIN">
     </form>
     <br />
-    <button type="button" class="navyBtn" onClick="location.href='join.php'">
+      <button type="button" class="navyBtn" onClick="location.href='join.php'"> SIGN UP </button>
     </div>
  </div>
   
