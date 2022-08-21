@@ -36,7 +36,7 @@
               <input type="submit" value="LOGIN">
     </form>
     <br />
-    <button id="join" oncick="location.href='./join.php'"> SIGN UP</button>
+    <button id="join" oncick="location.href=' join.php'"> SIGN UP</button>
     </div>
  </div>
   
