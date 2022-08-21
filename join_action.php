@@ -16,7 +16,7 @@
     if($result) {
      ?>       <script>
               alert('가입 되었습니다.');
-              location.replace("index.php");
+              location.replace("./index.php");
               </script>
    <?php }
             else{
