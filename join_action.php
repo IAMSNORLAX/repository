@@ -1,5 +1,5 @@
 <?php
-    $connect = mysqli_connect('localhost','','','') or die("fail");
+    $connect = mysqli_connect('','','','') or die("fail");
 
     $id=$_GET[id];
     $pw=$_GET[pw];
