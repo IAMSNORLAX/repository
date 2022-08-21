@@ -1,21 +1,6 @@
 <?php
   error_reporting( E_ALL );
   ini_set( "display_errors", 1 );
-?>
-<!doctype html>
-<html lang="ko">
-  <head>
-    <meta charset="utf-8">
-    <title>PHP</title>
-    <style>
-      body { font-family: Consolas, sans-serif; }
-      input, button { font-family: inherit; font-size: inherit; }
-    </style>
-  </head>
-  <body>
-    <p><?php echo $asd; ?></p>
-  </body>
-</html>
 
 <?php
     $connect = mysqli_connect('localhost','team-h','Dnjswndbf3.14','DB_BOARD')
@@ -55,25 +40,6 @@ if ($result) {
     }
     mysqli_close($connect);
     ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     $result = $connect->query($query);
