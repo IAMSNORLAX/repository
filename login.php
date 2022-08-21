@@ -6,7 +6,7 @@
     <style>
     body{
         margin: 0;
-        background-color: rgb(110, 199, 231);}
+       
 
     #main{
         position: absolute;
