@@ -6,11 +6,11 @@
 <head>
 <body>
         <div align='center'>
-                <p>회원가입</p>
+                <p>S I G N U P</p>
                 <form method='post' action='join_action.php'>
                         <p>ID: <input type="text" name="id"></p>
                         <p>PW: <input type="password" name="pw"></p>
-                        <input type="submit" value="회원가입">
+                        <input type="submit" value="J O I N">
                 </form>
             </div>
         </body>
