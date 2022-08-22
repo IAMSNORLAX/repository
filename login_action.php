@@ -18,7 +18,7 @@
                 $_SESSION['userid']=$id;
                 if(isset($_SESSION['userid'])){
                    echo  "<script> alert('로그인 되었습니다.');
-                        location.replace('login_success');
+                        location.replace('index.html');
                     </script>";
                     
                 }
