@@ -8,7 +8,7 @@
 <body>
     <div align='center'>
         <span>
-            <p style="font-size: 25px;"><b>로그인</b></p>
+            <p style="font-size: 25px;"><b>L O G I N</b></p>
         </span>
 
         <form method='post' action='login_action.php'>
@@ -17,7 +17,7 @@
             <br />&nbsp;
             <input type="submit" value="로그인">&nbsp;&nbsp;
         </form><br />
-        <button id="register" onclick="location.href='./register.php'">회원가입</button>
+        <button id="register" onclick="location.href='join.php'">S I G N U P</button>
 
     </div>
 </body>
