@@ -4,7 +4,7 @@
 ?>
 
 <?php
-    $connect = mysqli_connect("localhost","team-h","Dnjswndbf3.14","DB_BOARD")
+    $connect = mysqli_connect("localhost","team-h","Dnjswndbf3.14","DB_BOARD");
 
     $id=$_POST['id'];
     $pw=$_POST['pw'];
