@@ -22,38 +22,32 @@
         $result = $connect->query($query);
 
 if ($result) {
-    ?> <script>
+    echo "<script>
         alert('SIGN UP SUCCESS');
-        location.replace("login.php");
-        </script>
+        location.replace('login.php');
+        </script>";
 
-    <?php } else {
-        ?> <script>
-            alert("SIGU UP FAILED");
-            </script>
-    <?php }
+     } else {
+        echo "<script>
+            alert('SIGU UP FAILED');
+            </script>";
+     }
 
     }
     mysqli_close($connect);
-    ?>
+    
 
 
     $result = $connect->query($query);
 
     if ($result) {
-    ?>       <script>
-              alert('가입 되었습니다.');
-              location.replace("./index.php");
-              </script>
-   <?php }
+        echo "<script>alert('가입 되었습니다.');location.replace('index.php');</script>";
+    }
             else{
-?>              <script>
+        echo    "<script>alert('fail');</script>";
+    }
 
-                        alert("fail");
-                </script>
-<?php    }
-
-                mysqli_close($connect);
+                
 ?>
       
     
