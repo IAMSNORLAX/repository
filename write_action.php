@@ -1,5 +1,5 @@
 <?php
-        $connect = mysqli_connect() or die("fail");
+        $connect = mysqli_connect('localhost','team-h','Dnjswndbf3.14','DB_BOARD') or die("fail");
 
         $id = $_GET[name];
         $pw = $_GET[pw];
@@ -14,11 +14,11 @@
 
     $result = $connect->query($query);
     if($result){
-?>       <script>
-            alert("<?php echo" 글이 등록되었습니다."?>");
-            location.replace("<?php echo $URL?>");
-        </script>
-<?php
+    echo"<script>
+            alert(' 글이 등록되었습니다.');
+            location.replace('echo $URL?');
+        </script>";
+
     }
     else{
         echo "F A I L";
