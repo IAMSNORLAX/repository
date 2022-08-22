@@ -14,7 +14,7 @@
             $row=mysqli_fetch_assoc($result);
 
 
-            if($row['pw']==$pw){
+            if($row['pw']==$pw)
                 $_SESSION['userid']=$id;
                 if(isset($_SESSION['userid'])){
                    echo  "<script> alert('로그인 되었습니다.');
