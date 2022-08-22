@@ -14,11 +14,8 @@
     $count = mysqli_num_rows($result1);
 
     if ($count) {
-    ?><script>
-            alert('ID ALREADY EXIST');
-            history.back();
-            </script>
-    <?php } else {
+    echo "<script>alert('ID ALREADY EXIST');history.back();</script>";
+    } else {
 
         $query = "insert into member(id, pw, date, permit) values('$id', '$pw', now(), 0)";
 
