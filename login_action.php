@@ -10,7 +10,7 @@
         $query = "select * from member where id='$id'";
         $result = $connect->query($query);
 
-        if(mysqli_num_rows($result)==1) 
+        if(mysqli_num_rows($result)==1) {
             $row=mysqli_fetch_assoc($result);
 
 
@@ -26,7 +26,7 @@
                     echo "session fail";
                 }
             }
-            
+        }
             
             else{
                 echo  "<script>
