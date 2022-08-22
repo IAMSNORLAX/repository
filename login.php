@@ -30,7 +30,7 @@
     <div align='center'> <!--중앙 배열-->
     <span>L O G I N</span> <!--로그인 글자 나타나는 것-->
 
-    <form method='get' action='login.php'>  <!--php 로그인 할수 있도록 -->
+    <form method='get' action='login_action.php'>  <!--php 로그인 할수 있도록 -->
               <p>I D: <input name="id" type="text"></p>
               <p>P W: <input name="pw" type="password"></p>
               <input type="submit" value="LOGIN">
