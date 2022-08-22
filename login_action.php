@@ -1,7 +1,7 @@
 <?php
         session_start();
 
-        $connect = mysqli_connect("localhost","","","") or die("fail");
+        $connect = mysqli_connect('localhost','team-h','Dnjswndbf3.14','DB_BOARD') or die("fail");
 
         $id=$_GET['id'];
         $pw=$_GET['pw'];
