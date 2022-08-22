@@ -9,8 +9,6 @@
     $id=$_POST['id'];
     $pw=$_POST['pw'];
 
-    $date = date('Y-m-d H:i:s');
-
     $query1 = "select * from member where id ='$id'";
     $result1 = $connect->query($query1);
     $count = mysqli_num_rows($result1);
@@ -22,7 +20,7 @@
             </script>
     <?php } else {
 
-        $query = "insert into member(id, pw, date, permit) values('$id', '$pw', '$date', 0)";
+        $query = "insert into member(id, pw, date, permit) values('$id', '$pw', now(), 0)";
 
         $result = $connect->query($query);
 
