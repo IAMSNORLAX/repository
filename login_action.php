@@ -17,11 +17,10 @@
             if($row['pw']==$pw){
                 $_SESSION['userid']=$id;
                 if(isset($_SESSION['userid'])){
-                ?>    <script>
-                        alert("로그인 되었습니다.");
-                        location.replace("./login_success");
-                    </script>
-<?php                    
+                   echo  "<script> alert('로그인 되었습니다.');
+                        location.replace('login_success');
+                    </script>";
+                    
                 }
                 else{
                     echo "session fail";
@@ -29,19 +28,19 @@
             }
             
             else{
-         ?>           <script>
-                        alert("아이디 혹은 비밀번호가 잘못되었습니다.");
+                echo  "<script>
+                        alert('아이디 혹은 비밀번호가 잘못되었습니다.');
                         history.back();
-                    </script>
+                    </script>";
             }
-        <?php
+        
         }
             else{
-?>                <script>
-                    alert("아이디 혹은 비밀번호가 잘못되었습니다.");
+              echo  "<script>
+                    alert('아이디 혹은 비밀번호가 잘못되었습니다.');
                     history.back();
-                    </script>
-<?php
+                    </script>";
+
             }
 ?>
 
