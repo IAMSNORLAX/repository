@@ -5,12 +5,11 @@
         $pw = $_GET[pw];
         $title = $GET[title];
         $content = $_GET[content];
-        $date = date(Y-m-d H:i:s);
 
         $URL = 'index.html';
 
         $query = "insert into board (number, title, title content, date, hit, id, pw)
-                valuse(null, '$title', '$content', '$date', 0, '$id', '$pw')";
+                valuse(null, '$title', '$content', '$date', now(), '$id', '$pw')";
 
     $result = $connect->query($query);
     if($result){
