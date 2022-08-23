@@ -9,7 +9,7 @@
 
         $URL = 'index.html';
 
-        $query = "insert into board (number, title, title content, date, hit, id, pw)
+        $query = "insert into board (number, title, content, date, hit, id, pw)
                 valuse(null, '$title', '$content', '$date', 0, '$id', '$pw')";
 
     $result = $connect->query($query);
