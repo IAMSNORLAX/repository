@@ -1,24 +1,3 @@
-<?php
-    $connect = mysqli_connect('20.249.82.171', 'team-h', 'Dnjswndbf3.14', 'DB_BOARD') or die("connect failed");
-    $query = "select * from board order by number desc";   
-    $result = mysqli_query($connect, $query);
-    $total = mysqli_num_rows($result); 
-
-    session_start();
-
-    if (isset($_SESSION['userid'])) {
-    ?><b><?php echo $_SESSION['userid']; ?></b>, HELLO :)
-        <button onclick="location.href='logout_action.php'" style="float:right; font-size:15.5px;">L O G O U T</button>
-        <br />
-    <?php
-    } else {
-    ?>
-        <button onclick="location.href='login.php'" style="float:right; font-size:15.5px;">L O G I N</button>
-        <br />
-    <?php
-    }
-    ?>
-
 
 <!DOCTYPE html>
 
