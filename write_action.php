@@ -10,7 +10,7 @@
         $URL = 'index.html';
 
         $query = "insert into board ('number', 'title', 'content', 'date', 'hit', 'id', 'pw')
-                valuse(null, '$title', '$content', '$date', 0, '$id', '$pw')";
+                values(null, '$title', '$content', '$date', 0, '$id', '$pw')";
 
     $result = $connect->query($query);
     if($result){
@@ -20,9 +20,9 @@
         </script>";
 
     }
-    else{
-        echo "F A I L";
-    }
+    //else{
+       // echo "F A I L";
+   // }
     mysqli_close($connect);
 ?>
 
