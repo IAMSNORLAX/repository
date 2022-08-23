@@ -14,11 +14,11 @@
 
     $result = $connect->query($query);
     if($result){
-?>       <script>
-            alert("<?php echo" 글이 등록되었습니다."?>");
-            location.replace("<?php echo $URL?>");
-        </script>
-<?php
+      echo "<script>
+            alert( echo' 글이 등록되었습니다.');
+            location.replace("echo $URL");
+        </script>";
+
     }
     else{
         echo "F A I L";
