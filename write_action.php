@@ -9,8 +9,8 @@
 
         $URL = 'index.html';
 
-        $query = "insert into board ('title', 'content', 'date', 'hit', 'id', 'pw')
-                values('$title', '$content', '$date', 0, '$id', '$pw')";
+        $query = "insert into board (title, content,id, pw, date, hit)
+                values('$title', '$content','$id', '$pw', '$date', 0)";
 
     $result = $connect->query($query);
     if($result){
