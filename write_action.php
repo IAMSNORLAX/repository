@@ -1,10 +1,10 @@
 <?php
         $connect = mysqli_connect('localhost','team-h','Dnjswndbf3.14','DB_BOARD') or die("fail");
 
-        $id = $_GET[name];
-        $pw = $_GET[pw];
-        $title = $GET[title];
-        $content = $_GET[content];
+        $id = $_POST[name];
+        $pw = $_POST[pw];
+        $title = $_POST[title];
+        $content = $_POST[content];
         $date = date('Y-m-d H:i:s');
 
         $URL = 'index.html';
