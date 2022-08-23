@@ -5,7 +5,6 @@
         $pw = $_GET[pw];
         $title = $GET[title];
         $content = $_GET[content];
-        $date = date(Y-m-d H:i:s);
 
         $URL = 'index.html';
 
@@ -14,9 +13,9 @@
 
     $result = $connect->query($query);
     if($result){
-      echo "<script>
-            alert( echo' 글이 등록되었습니다.');
-            location.replace("echo $URL");
+    echo"<script>
+            alert(' 글이 등록되었습니다.');
+            location.replace('echo $URL?');
         </script>";
 
     }
@@ -25,3 +24,4 @@
     }
     mysqli_close($connect);
 ?>
+
