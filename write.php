@@ -44,7 +44,7 @@
 
                     <tr>
                         <td>TITLE</td>
-                        <td><input type = text name = name size=20> </td>
+                        <td><input type = text name = title size=20> </td>
                         </tr>
 
                     <tr>
