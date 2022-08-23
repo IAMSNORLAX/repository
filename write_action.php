@@ -1,5 +1,5 @@
 <?php
-        $connect = mysqli_connect() or die("fail");
+        $connect = mysqli_connect('localhost','team-h','Dnjswndbf3.14','DB_BOARD') or die("fail");
 
         $id = $_GET[name];
         $pw = $_GET[pw];
