@@ -5,6 +5,7 @@
         $pw = $_GET[pw];
         $title = $GET[title];
         $content = $_GET[content];
+        $date = date('Y-m-d H:i:s');
 
         $URL = 'index.html';
 
