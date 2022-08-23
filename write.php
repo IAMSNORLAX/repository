@@ -29,7 +29,7 @@
     }
 </style>
 <body>
-    <form method = "get" action = "write_action.php">
+    <form method = "post" action = "write_action.php">
     <table style="padding-top:50px" align = center width=700 border=0 cellpadding=0>
         <tr>
             <td height=20 align= center bgcolor=#ccc><font color=white W R I T E </font></td>
