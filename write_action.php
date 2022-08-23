@@ -16,7 +16,7 @@
     if($result){
     echo"<script>
             alert(' 글이 등록되었습니다.');
-            location.replace('echo $URL?');
+            location.replace('index.html');
         </script>";
 
     }
