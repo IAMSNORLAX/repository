@@ -37,6 +37,7 @@
     $connect = mysqli_connect('localhost', 'team-h', 'Dnjswndbf3.14', 'DB_BOARD') or die ("C O N N E C T  F A I L")
     $query = "select * from board order by number desc";
     $result = $connect->query($query);
+    $total = mysqli_num_rows($result);
    
 ?>
 
@@ -58,7 +59,7 @@
 
 <tbody>
     <?php
-            while ($rows = mysqli_fetch_assoc($result)) { //result set에서 레코드(행)를 1개씩 리턴
+            while ($rows = mysqli_fetch_assoc($result)) { 
                 if ($total % 2 == 0) {
             ?>
                     <tr class="even">
