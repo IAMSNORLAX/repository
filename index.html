@@ -37,7 +37,7 @@
     $connect = mysqli_connect('localhost', 'team-h', 'Dnjswndbf3.14', 'DB_BOARD') or die ("C O N N E C T  F A I L")
     $query = "select * from board order by number desc";
     $result = $connect->query($query);
-    $total = mysqli_num_rows($result);
+   $result = mysqli_query($connect, $query);
 ?>
 
     <table align = center>
