@@ -1,102 +1,50 @@
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta charset = 'utf-8'>
-</head>
-<style>
-    table{
-        border-top: 1px
-        border-collapse: collapse;
-    }
-    tr{
-        border-bottom: 1px
-        padding: 20px;
-        
-    }
-    td{
-        border-bottom: 1px
-        padding: 20px;
-
-    }
-    table .even{
-        background: #f7f0f0;
-    }
-    .text{
-        text-align:center;
-        padding-top:20px;
-
-    }
-    .text:hover{
-        text-decoration: underline;
-    }
-    
-</style>
-<body>
-    <?php
-    $connect = mysqli_connect('localhost', 'team-h', 'Dnjswndbf3.14', 'DB_BOARD') or die ("C O N N E C T  F A I L")
-    $query = "select * from board order by number desc";    
-    $result = mysqli_query($connect, $query);
-    //$result = $connect->query($query);
-    $total = mysqli_num_rows($result);  
-    ?>
-   
+<?php 
+  include  $_SERVER['DOCUMENT_ROOT']."/db.php";
 ?>
-
-    <table align = center>
-    <div class =text>
-    <text-align: right>
-   
-</div>
-
-<h2 align=center> B O A R D</h2>
-    <tr>
-<td width = "50" align="center">번호</td>
-<td width = "500" align="center">제목</td>
-<td width = "100" align="center">작성자</td>
-<td width = "200" align="center">날짜</td>
-<td width = "50" align="center">조회수</td>
-</tr>
-</thead>
-
-<tbody>
-<?php
-            while ($rows = mysqli_fetch_assoc($result)) {
-                if ($total % 2 == 0) {
-            ?>
-                    <tr class="even">
-                   
-                     } else {
-                    
-                    <tr>
-                       
-                    <?php } ?>
-                    <td width="50" align="center"><?php echo $total ?></td>
-                    <td width="500" align="center">
-                        <a href="view.php?number=<?php echo $rows['number'] ?>">
-                            <?php echo $rows['title'] ?>
-                    </td>
-                    <td width="100" align="center"><?php echo $rows['id'] ?></td>
-                    <td width="200" align="center"><?php echo $rows['date'] ?></td>
-                    <td width="50" align="center"><?php echo $rows['hit'] ?></td>
-                    </tr>
-                <?php
-                $total--;
-            }
-                ?>
-
-    <td width = "50" align = "center"><?php echo $ total?></td>
-    <td width = "500" align = "center">
-     <a href = "view.php?number=<?php echo $rows['number']?>">
-     <?php echo $rows['title']?></td>
-     <td width = "100" align = "center"><?php echo $rows['id']?></td>
-    <td width = "200" align = "center"><?php echo $rows['date']?></td>
-    <td width = "50" align = "center"><?php echo $rows['hit']?></td>
-    
-</tbody>
-</table>
-
-<div class = text>
-    <font style="cursor: hand"onclick="location.href='write.php'">W R I T E</font>
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<title>게시판</title>
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+<body>
+<div id="board_area"> 
+  <h1>자유게시판</h1>
+  <h4>자유롭게 글을 쓸 수 있는 게시판입니다.</h4>
+    <table class="list-table">
+      <thead>
+          <tr>
+              <th width="70">번호</th>
+                <th width="500">제목</th>
+                <th width="120">글쓴이</th>
+                <th width="100">작성일</th>
+                <th width="100">조회수</th>
+            </tr>
+        </thead>
+        <?php
+          $sql = mq("select * from board order by idx desc limit 0,5"); // board테이블에있는 idx를 기준으로 내림차순해서 5개까지 표시
+            while($board = $sql->fetch_array())
+            {
+              $title=$board["title"]; 
+              if(strlen($title)>30)
+              { 
+                $title=str_replace($board["title"],mb_substr($board["title"],0,30,"utf-8")."...",$board["title"]); //title이 30을 넘어서면 ...표시
+              }
+        ?>
+      <tbody>
+        <tr>
+          <td width="70"><?php echo $board['idx']; ?></td>
+          <td width="500"><a href=""><?php echo $title;?></a></td>
+          <td width="120"><?php echo $board['name']?></td>
+          <td width="100"><?php echo $board['date']?></td>
+          <td width="100"><?php echo $board['hit']; ?></td>
+        </tr>
+      </tbody>
+      <?php } ?>
+    </table>
+    <div id="write_btn">
+      <a href="/page/board/write.php"><button>글쓰기</button></a>
+    </div>
+  </div>
 </body>
 </html>
