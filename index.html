@@ -58,30 +58,30 @@
 </thead>
 
 <tbody>
-     <?php
-            while ($rows = mysqli_fetch_assoc($result)) { 
+<?php
+            while ($rows = mysqli_fetch_assoc($result)) {
                 if ($total % 2 == 0) {
-            
+            ?>
                     <tr class="even">
-                     
-                    } else {
+                   
+                     } else {
                     
                     <tr>
-                     
-                     } 
-                    <td width="50" align="center"> echo "$total"; </td>
+                       
+                    <?php } ?>
+                    <td width="50" align="center"><?php echo $total ?></td>
                     <td width="500" align="center">
-                        <a href="view.php?number= echo "$rows['number']";">
-                             echo "$rows['title']";
+                        <a href="view.php?number=<?php echo $rows['number'] ?>">
+                            <?php echo $rows['title'] ?>
                     </td>
-                    <td width="100" align="center"> echo "$rows['id']"; </td>
-                    <td width="200" align="center"> echo "$rows['date']"; </td>
-                    <td width="50" align="center"> echo "$rows['hit']"; </td>
+                    <td width="100" align="center"><?php echo $rows['id'] ?></td>
+                    <td width="200" align="center"><?php echo $rows['date'] ?></td>
+                    <td width="50" align="center"><?php echo $rows['hit'] ?></td>
                     </tr>
-                
+                <?php
                 $total--;
             }
-            ?>
+                ?>
 
     <td width = "50" align = "center"><?php echo $ total?></td>
     <td width = "500" align = "center">
