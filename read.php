@@ -144,7 +144,23 @@
         if (isset($_SESSION['userid']) and $_SESSION['userid'] == $rows['id']) { ?>
             <button class="read_btn1" onclick="location.href='./modify.php?number=<?= $number ?>'">수정</button>&nbsp;&nbsp;
             <button class="read_btn1" a onclick="ask();">삭제</button>
-
+	
+	    
+	    <div class="reply_view">
+	<h3>댓글목록</h3>
+		<?php
+			$sql3 = mq("select * from reply where con_num='".$bno."' order by idx desc");
+			while($reply = $sql3->fetch_array()){ 
+		?>
+		<div class="dap_lo">
+			<div><b><?php echo $reply['name'];?></b></div>
+			<div class="dap_to comt_edit"><?php echo nl2br("$reply[content]"); ?></div>
+			<div class="rep_me dap_to"><?php echo $reply['date']; ?></div>
+			<div class="rep_me rep_menu">
+				<a class="dat_edit_bt" href="#">수정</a>
+				<a class="dat_delete_bt" href="#">삭제</a>
+		</div>
+	    
             <div class="dap_ins">
 		<form action="reply_ok.php?idx=<?php echo $bno; ?>" method="post">
 			<input type="text" name="dat_user" id="dat_user" class="dat_user" size="15" placeholder="아이디">
