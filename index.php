@@ -61,9 +61,12 @@
     ?>
         <button onclick="location.href='login.php'" style="float:right; font-size:15.5px;">로그인</button>
         <br />
+    
     <div align="rihgt">
-        <font style="cursor: hand" onClick="location.href='write.php'">글쓰기</font>
+        <font style="cursor: hand" onClick="location.href='index2.php'">정렬</font>
     </div>
+    
+    
     <?php
     }
     ?>
