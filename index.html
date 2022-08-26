@@ -51,6 +51,20 @@
     $result = mysqli_query($connect, $query);
     //$result = $connect->query($query);
     $total = mysqli_num_rows($result);  
+       session_start();
+
+    if (isset($_SESSION['userid'])) {
+    ?><b><?php echo $_SESSION['userid']; ?></b>님 반갑습니다.
+        <button onclick="location.href='./logout_action.php'" style="float:right; font-size:15.5px;">로그아웃</button>
+        <br />
+    <?php
+    } else {
+    ?>
+        <button onclick="location.href='./login.php'" style="float:right; font-size:15.5px;">로그인</button>
+        <br />
+    <?php
+    }
+    ?>
     ?>
     <p style="font-size:25px; text-align:center"><b>게시판</b></p>
     <table align=center>
