@@ -55,12 +55,12 @@
 
     if (isset($_SESSION['userid'])) {
     ?><b><?php echo $_SESSION['userid']; ?></b>님 반갑습니다.
-        <button onclick="location.href='./logout_action.php'" style="float:right; font-size:15.5px;">로그아웃</button>
+        <button onclick="location.href='logout_action.php'" style="float:right; font-size:15.5px;">로그아웃</button>
         <br />
     <?php
     } else {
     ?>
-        <button onclick="location.href='./login.php'" style="float:right; font-size:15.5px;">로그인</button>
+        <button onclick="location.href='login.php'" style="float:right; font-size:15.5px;">로그인</button>
         <br />
     <?php
     }
@@ -80,7 +80,7 @@
 
         <tbody>
             <?php
-            while ($rows = mysqli_fetch_assoc($result)) { //result set에서 레코드(행)를 1개씩 리턴
+            while ($rows = mysqli_fetch_assoc($result)) { 
                 if ($total % 2 == 0) {
             ?>
                     <tr class="even">
@@ -107,7 +107,7 @@
     </table>
 
     <div class=text>
-        <font style="cursor: hand" onClick="location.href='./write.php'">글쓰기</font>
+        <font style="cursor: hand" onClick="location.href='write.php'">글쓰기</font>
     </div>
 </body>
 
