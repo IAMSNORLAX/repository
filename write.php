@@ -46,7 +46,6 @@
     ?>
 
     <form method="post" action="write_action.php">
-        <!-- method를 get -> post로 바꿔야됨!! -->
         <table style="padding-top:50px" align=center width=auto border=0 cellpadding=2>
             <tr>
                 <td style="height:40; float:center; background-color:#3C3C3C">
