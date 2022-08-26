@@ -50,6 +50,8 @@
     $query = "select * from board order by number desc";   
     $result = mysqli_query($connect, $query);
     $total = mysqli_num_rows($result);  
+    $keyword = $_GET['search'];
+    $sql = "select * from DB_BOARD where board like '%$keyword%'";
        session_start();
 
     if (isset($_SESSION['userid'])) {
@@ -90,7 +92,7 @@
                     <td width="50" align="center"><?php echo $total ?></td>
                     <td width="500" align="center">
                         <a href="read.php?number=<?php echo $rows['number'] ?>">
-                            <?php echo $rows['title'] ?>
+                            <?php echo $sql ?>
                     </td>
                     <td width="100" align="center"><?php echo $rows['id'] ?></td>
                     <td width="200" align="center"><?php echo $rows['date'] ?></td>
