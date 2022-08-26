@@ -47,13 +47,11 @@
 <body>
     <?php
     $connect = mysqli_connect('localhost', 'team-h', 'Dnjswndbf3.14', 'DB_BOARD') or die("connect failed");
-  
+    $query = "select * from board order by number desc";   
     $result = mysqli_query($connect, $query);
     $total = mysqli_num_rows($result);  
-    $user_key = $_GET['key'];
-    $sql = "select * from DB_BOARD where board like '%user_key%'";
-    $list = '';
-    
+    $keyword = $_GET['search'];
+    $sql = "select * from DB_BOARD where board like '%$keyword%'";
        session_start();
 
     if (isset($_SESSION['userid'])) {
@@ -100,14 +98,6 @@
                     <td width="200" align="center"><?php echo $rows['date'] ?></td>
                     <td width="50" align="center"><?php echo $rows['hit'] ?></td>
                     </tr>
-
-                    while($row = mysqli_fetch_array($result)){
-                     $list = $list."<li>{$row['number']}: <a href=\"view.php?number={$row['number']}\">
-                            {$row['name']}</a></li>";
-}
-
-
-
                 <?php
                 $total--;
             }
