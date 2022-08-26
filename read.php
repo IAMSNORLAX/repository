@@ -97,8 +97,8 @@
 
 <body>
     <?php
-    $connect = mysqli_connect('127.0.0.1', 'root', 'password', 'db_board');
-    $number = $_GET['number'];  // GET 방식 사용
+    $connect = mysqli_connect('localhost', 'team-h', 'Dnjswndbf3.14', 'DB_BOARD');
+    $number = $_POST['number'];  // GET 방식 사용
     session_start();
     $query = "select title, content, date, hit, id from board where number = $number";
     $result = $connect->query($query);
@@ -143,7 +143,7 @@
         <?php
         if (isset($_SESSION['userid']) and $_SESSION['userid'] == $rows['id']) { ?>
             <button class="read_btn1" onclick="location.href='./modify.php?number=<?= $number ?>'">수정</button>&nbsp;&nbsp;
-            <!-- 여기서부터 추가됨 -->
+           
             <button class="read_btn1" a onclick="ask();">삭제</button>
 
             <script>
@@ -153,7 +153,7 @@
                     }
                 }
             </script>
-            <!-- 여기까지 -->
+       
         <?php } ?>
 
     </div>
