@@ -97,7 +97,7 @@
 
 <body>
     <?php
-    $connect = mysqli_connect('localhost', 'team-h', 'Dnjswdbf3.14', 'DB_BOARD');
+    $connect = mysqli_connect('localhost', 'team-h', 'Dnjswndbf3.14', 'DB_BOARD');
     $number = $_GET['number'];  // GET 방식 사용
     session_start();
     $query = "select title, content, date, hit, id from board where number = $number";
