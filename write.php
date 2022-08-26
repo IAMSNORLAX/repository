@@ -29,6 +29,19 @@
     }
 </style>
 <body>
+<?php
+    session_start();
+    if (!isset($_SESSION['userid'])) {
+    
+
+        echo"<script>
+            alert('로그인이 필요합니다.');
+            location.replace('login.php);
+        </script>";
+    
+    }
+    ?>
+
     <form method = "post" action = "write_action.php">
     <table style="padding-top:50px" align = center width=700 border=0 cellpadding=0>
         <tr>
