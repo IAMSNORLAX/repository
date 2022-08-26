@@ -51,7 +51,7 @@
     $result = mysqli_query($connect, $query);
     $total = mysqli_num_rows($result);  
     $search = $_GET['search']
-    $query = "SELECT * FROM 테이블명 WHERE 컬럼명 LIKE ' %search% '";
+    $query = "SELECT * FROM DB_BOARD WHERE board LIKE ' %search% '";
        session_start();
 
     if (isset($_SESSION['userid'])) {
