@@ -143,7 +143,6 @@
         <?php
         if (isset($_SESSION['userid']) and $_SESSION['userid'] == $rows['id']) { ?>
             <button class="read_btn1" onclick="location.href='./modify.php?number=<?= $number ?>'">수정</button>&nbsp;&nbsp;
-            <!-- 여기서부터 추가됨 -->
             <button class="read_btn1" a onclick="ask();">삭제</button>
 
             <script>
@@ -153,7 +152,7 @@
                     }
                 }
             </script>
-            <!-- 여기까지 -->
+           
         <?php } ?>
 
     </div>
