@@ -1,6 +1,6 @@
 <?php 
     $connect = mysqli_connect('localhost,')
-    $number = $_GET['number'];
+    $number = $_POST['number'];
     session_start();
     $query = ""
     $result = $connect->query($query);
