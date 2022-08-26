@@ -47,11 +47,9 @@
 <body>
     <?php
     $connect = mysqli_connect('localhost', 'team-h', 'Dnjswndbf3.14', 'DB_BOARD') or die("connect failed");
-      
+    $query = "select * from board order by number desc";   
     $result = mysqli_query($connect, $query);
     $total = mysqli_num_rows($result);  
-    $search = $_GET['search'];
-    $query = "SELECT * FROM DB_BOARD WHERE board LIKE '%search%'";
        session_start();
 
     if (isset($_SESSION['userid'])) {
@@ -96,7 +94,7 @@
                     </td>
                     <td width="100" align="center"><?php echo $rows['id'] ?></td>
                     <td width="200" align="center"><?php echo $rows['date'] ?></td>
-                    <td width="50" align="center"><?php echo $search?></td>
+                    <td width="50" align="center"><?php echo $rows['hit'] ?></td>
                     </tr>
                 <?php
                 $total--;
@@ -105,14 +103,14 @@
     
       <div id="search_box">
     <form action="search_result.php" method="get">
-      <input type="text" name="search" size="40" required="required" /> <button>S E A R C H</button>
+      <input type="text" name="search" size="40" required="required" /> <button>검색</button>
     </form>
     </div>
         </tbody>
     </table>
 
     <div class=text>
-        <font style="cursor: hand" onClick="location.href='write.php'">W R I T E</font>
+        <font style="cursor: hand" onClick="location.href='write.php'">글쓰기</font>
     </div>
  <div class=text>
         <font style="cursor: hand" onClick="location.href='index2.php'">정렬</font>
