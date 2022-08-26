@@ -1,6 +1,6 @@
 <?php
 $connect = mysqli_connect('localhost', 'team-h', 'Dnjswndbf3.14', 'DB_BOARD') or die("connect failed");
-$number = $_POST['number'];
+$number = $_GET['number'];
 
 $query = "select id from board where number = $number";
 $result = $connect->query($query);
