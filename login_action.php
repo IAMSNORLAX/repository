@@ -19,7 +19,7 @@
                 if(isset($_SESSION['userid'])){
                 echo  "<script>
                         alert('L O G I N  S U C C E S S.');
-                        location.replace('./index.html');
+                        location.replace('./index.php');
                     </script>";
                 }
             }
