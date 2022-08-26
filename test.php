@@ -1,6 +1,6 @@
 <?php 
 
-$connect - mysqli_connect('localhost','team-h','Dnjswndbf3.14', 'DB_BOARD');
+$connect = mysqli_connect('localhost','team-h','Dnjswndbf3.14', 'DB_BOARD');
 
 $sql="select * from board order by no desc";
 $result-mysqli_query($con,$sql);
