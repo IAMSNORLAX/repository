@@ -97,8 +97,8 @@
 
 <body>
     <?php
-    $connect = mysqli_connect('localhost', 'team-h', 'Dnjswndbf3.14', 'DB_BOARD');
-    $number = $_POST['number'];  // GET 방식 사용
+    $connect = mysqli_connect('127.0.0.1', 'root', 'password', 'db_board');
+    $number = $_GET['number'];  // GET 방식 사용
     session_start();
     $query = "select title, content, date, hit, id from board where number = $number";
     $result = $connect->query($query);
@@ -138,22 +138,13 @@
         </tr>
     </table>
 
+    <!-- MODIFY & DELETE 추후 세션처리로 보완 예정 -->
     <div class="read_btn">
         <button class="read_btn1" onclick="location.href='./index.php'">목록</button>&nbsp;&nbsp;
         <?php
         if (isset($_SESSION['userid']) and $_SESSION['userid'] == $rows['id']) { ?>
             <button class="read_btn1" onclick="location.href='./modify.php?number=<?= $number ?>'">수정</button>&nbsp;&nbsp;
-          
-            <button class="read_btn1" a onclick="ask();">삭제</button>
-
-            <script>
-                function ask() {
-                    if (confirm("게시글을 삭제하시겠습니까?")) {
-                        window.location = "./delete.php?number=<?= $number ?>"
-                    }
-                }
-            </script>
-            
+            <button class="read_btn1" onclick="location.href='./delete.php?number=<?= $number ?>&id=<?= $_SESSION['userid'] ?>'">삭제</button>
         <?php } ?>
 
     </div>
