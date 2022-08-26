@@ -102,7 +102,7 @@
                 ?>
     
       <div id="search_box">
-    <form action="/page/board/search_result.php" method="get">
+    <form action="search_result.php" method="get">
       <input type="text" name="search" size="40" required="required" /> <button>검색</button>
     </form>
     </div>
