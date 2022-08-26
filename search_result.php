@@ -47,9 +47,10 @@
 <body>
     <?php
     $connect = mysqli_connect('localhost', 'team-h', 'Dnjswndbf3.14', 'DB_BOARD') or die("connect failed");
-    $query = "select * from board order by number desc";   
+    $query = "SELECT * FROM 테이블명 WHERE 컬럼명 LIKE ' %search% '";   
     $result = mysqli_query($connect, $query);
     $total = mysqli_num_rows($result);  
+    $search = $_GET['search']
        session_start();
 
     if (isset($_SESSION['userid'])) {
@@ -102,15 +103,15 @@
                 ?>
     
       <div id="search_box">
-    <form action="/page/board/search_result.php" method="get">
-      <input type="text" name="search" size="40" required="required" /> <button>검색</button>
+    <form action="search_result.php" method="get">
+      <input type="text" name="search" size="40" required="required" /> <button>S E A R C H</button>
     </form>
     </div>
         </tbody>
     </table>
 
     <div class=text>
-        <font style="cursor: hand" onClick="location.href='write.php'">글쓰기</font>
+        <font style="cursor: hand" onClick="location.href='write.php'">W R I T E</font>
     </div>
  <div class=text>
         <font style="cursor: hand" onClick="location.href='index2.php'">정렬</font>
