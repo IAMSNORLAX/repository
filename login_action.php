@@ -3,8 +3,8 @@
 
         $connect = mysqli_connect('localhost','team-h','Dnjswndbf3.14','DB_BOARD') or die("fail");
 
-        $id=$_GET['id'];
-        $pw=$_GET['pw'];
+        $id=$_POST['id'];
+        $pw=$_POST['pw'];
 
 
         $query = "select * from member where id='$id'";
