@@ -108,7 +108,12 @@
 
     <div class=text>
         <font style="cursor: hand" onClick="location.href='write.php'">글쓰기</font>
+        
     </div>
+ <div class=text>
+        <font style="cursor: hand" onClick="location.href='index.php'">정렬</font>
+    </div>
+    
 </body>
 
 </html>
