@@ -7,7 +7,7 @@
         $content = $_POST["content"];
         $date = date('Y-m-d H:i:s');
 
-        $URL = 'index.html';
+     
 
         $query = "insert into board (title, content,id, pw, date, hit)
                 values('$title', '$content','$id', '$pw', '$date', 0)";
@@ -16,7 +16,7 @@
     if($result){
     echo"<script>
             alert(' 글이 등록되었습니다.');
-            location.replace('index.html');
+            location.replace('index.php');
         </script>";
 
     }
