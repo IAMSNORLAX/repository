@@ -50,8 +50,8 @@
       
     $result = mysqli_query($connect, $query);
     $total = mysqli_num_rows($result);  
-    $search = $_GET['search']
-    $query = "SELECT * FROM DB_BOARD WHERE board LIKE ' %search% '";
+    $search = $_GET['search'];
+    $query = "SELECT * FROM DB_BOARD WHERE board LIKE '%search%'";
        session_start();
 
     if (isset($_SESSION['userid'])) {
