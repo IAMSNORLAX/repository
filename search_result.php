@@ -47,10 +47,11 @@
 <body>
     <?php
     $connect = mysqli_connect('localhost', 'team-h', 'Dnjswndbf3.14', 'DB_BOARD') or die("connect failed");
-    $query = "SELECT * FROM 테이블명 WHERE 컬럼명 LIKE ' %search% '";   
+      
     $result = mysqli_query($connect, $query);
     $total = mysqli_num_rows($result);  
     $search = $_GET['search']
+    $query = "SELECT * FROM 테이블명 WHERE 컬럼명 LIKE ' %search% '";
        session_start();
 
     if (isset($_SESSION['userid'])) {
@@ -95,7 +96,7 @@
                     </td>
                     <td width="100" align="center"><?php echo $rows['id'] ?></td>
                     <td width="200" align="center"><?php echo $rows['date'] ?></td>
-                    <td width="50" align="center"><?php echo $rows['hit'] ?></td>
+                    <td width="50" align="center"><?php echo $search?></td>
                     </tr>
                 <?php
                 $total--;
