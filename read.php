@@ -176,6 +176,7 @@
 			<div style="margin-top:10px; ">
 				<textarea name="content" class="reply_content" id="re_content" ></textarea>
 				<button id="rep_bt" class="re_bt">댓글</button>
+				<button onclick="location.href='comment_go.php'" style="float:right; font-size:15.5px;">로그인</button>
 				
 			</div>
 			
