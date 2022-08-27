@@ -40,8 +40,8 @@
             </tr>
         </thead>
         <?php
-          $sql2 = query("select * from board where $catagory like '%$search_con%' order by number desc");
-            echo mysql_error; 
+          $sql2 = query1("select * from board where $catagory like '%$search_con%' order by number desc");
+           $result1 = mysqli_query($connect, $query1);
           while($board = $sql2->fetch_array()){
            
           $title=$board["title"]; 
