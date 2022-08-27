@@ -22,7 +22,7 @@
 ?>
     <?php if($catagory=='title'){
         $catname = '제목';
-    } else if($catagory=='name'){
+    } else if($catagory=='id'){
         $catname = '작성자';
     } else if($catagory=='content'){
         $catname = '내용';
@@ -70,7 +70,7 @@
           ?>
         <!--- 추가부분 18.08.01 END -->
         <a href='read.php?number=<?php echo $board["number"]; ?>'><span style="background:yellow;"><?php echo $title; }?></span><span class="re_ct"></span></a></td>
-          <td width="120"><?php echo $board['name']?></td>
+          <td width="120"><?php echo $board['id']?></td>
           <td width="100"><?php echo $board['date']?></td>
           <td width="100"><?php echo $board['hit']; ?></td>
 
@@ -84,7 +84,7 @@
       <form action="search_result.php" method="get">
       <select name="catgo">
         <option value="title">제목</option>
-        <option value="name">글쓴이</option>
+        <option value="id">글쓴이</option>
         <option value="content">내용</option>
       </select>
       <input type="text" name="search" size="40" required="required"/> <button>검색</button>
