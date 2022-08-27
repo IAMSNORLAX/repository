@@ -6,32 +6,19 @@ $title = $_POST['title'];
 $content = $_POST['content'];           
 $date = date('Y-m-d H:i:s');   
 
-include $_SERVER['DOCUMENT_ROOT']."/db.php";
-$userpw = password_hash($_POST['pw'], PASSWORD_DEFAULT);
+//include $_SERVER['DOCUMENT_ROOT']."/db.php";
+//$userpw = password_hash($_POST['pw'], PASSWORD_DEFAULT);
 
 
 
 $URL = './index.php';                   
 
 
-$query = "INSERT INTO board (number, title, content, date, hit, id) 
-        values(null,'$title', '$content', '$date', 0, '$id')";
+$query = "INSERT INTO board (number, title, content, date, hit, id,file) 
+        values(null,'$title', '$content', '$date', 0, '$id','$o_name')";
 
 
 $result = $connect->query($query);
-
-
-
-include $_SERVER['DOCUMENT_ROOT']."/db.php";
-$date = date('Y-m-d');
-$userpw = password_hash($_POST['pw'], PASSWORD_DEFAULT);
-if(isset($_POST['lockpost'])){
-	$lo_post = '1';
-}else{
-	$lo_post = '0';
-}
-
-
 
 
 if ($result) {
@@ -54,7 +41,7 @@ $filename = iconv("UTF-8", "EUC-KR",$_FILES['b_file']['name']);
 $folder = "../../upload/".$filename;
 move_uploaded_file($tmpfile,$folder);
 
-$sql = mq("insert into board(name,pw,title,content,date,lock_post,file) values('".$_POST['name']."','".$userpw."','".$_POST['title']."','".$_POST['content']."','".$date."','".$lo_post."','".$o_name."')"); ?>
-<script type="text/javascript">alert("글쓰기 완료되었습니다.");</script>
+
+?>
 <meta http-equiv="refresh" content="0 url=/" />
 
