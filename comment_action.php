@@ -9,7 +9,7 @@ $bno = $_GET['number'];
 
 $URL = './index.php';                   
 
-
+$query1= "select * from board where number
 $query = "INSERT INTO comment where number=$bno (id, content, date, pw) 
         values('$id','$content;','$date', '$pw')";
 
