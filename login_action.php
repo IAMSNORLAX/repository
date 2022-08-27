@@ -15,7 +15,9 @@
 
 
         if ( ($id=='') || ($pw=='') ) {  echo "<script>alert('아이디 또는 패스워드를 입력하여 주세요.');
-        history.back();</script>";  exit;
+        history.back();</script>";  
+            exit;
+                                 }
 
         
 
