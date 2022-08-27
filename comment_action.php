@@ -5,7 +5,7 @@ $connect = mysqli_connect("localhost", "team-h", "Dnjswndbf3.14", "DB_BOARD") or
             
 $content = $_GET['search'];           
 $date = date('Y-m-d H:i:s');   
-$bno = $_GET['number'];
+$bno = $_GET['no'];
 $id = "anonymous";
 $pw = "anonymous";
 
