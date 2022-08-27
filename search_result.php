@@ -39,7 +39,7 @@
         </thead>
         <?php
           $query = ("select * from board where $catagory like '%$search_con%' order by number desc");
-           $connect->query($query);
+          $result = $connect->query($query);
           while($board = $query->fetch_array()){
            
           $title=$board["title"]; 
