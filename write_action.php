@@ -4,7 +4,13 @@ $connect = mysqli_connect("localhost", "team-h", "Dnjswndbf3.14", "DB_BOARD") or
 $id = $_POST['name'];                 
 $title = $_POST['title'];               
 $content = $_POST['content'];           
-$date = date('Y-m-d H:i:s');            
+$date = date('Y-m-d H:i:s');   
+$tmpfile =  $_FILES['b_file']['tmp_name'];
+$o_name = $_FILES['b_file']['name'];
+$filename = iconv("UTF-8", "EUC-KR",$_FILES['b_file']['name']);
+$folder = "../../upload/".$filename;
+move_uploaded_file($tmpfile,$folder);
+
 
 $URL = './index.php';                   
 
@@ -25,11 +31,6 @@ if(isset($_POST['lockpost'])){
 	$lo_post = '0';
 }
 
-$tmpfile =  $_FILES['b_file']['tmp_name'];
-$o_name = $_FILES['b_file']['name'];
-$filename = iconv("UTF-8", "EUC-KR",$_FILES['b_file']['name']);
-$folder = "../../upload/".$filename;
-move_uploaded_file($tmpfile,$folder);
 
 
 if ($result) {
