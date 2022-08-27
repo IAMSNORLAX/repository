@@ -112,7 +112,7 @@
                 $con_idx = $board["number"];
                 $query3=("SELECT COUNT(*) as cnt FROM reply where con_num=$con_idx");
                 $reply_count = mysqli_query($connect, $query3);
-                $rep_count = $mysqli_num_rows($reply_count);
+                $rep_count = mysqli_num_rows($reply_count);
             
               ?>
         
