@@ -48,7 +48,7 @@
 
 
 
-    <form method="post" action="write_action.php" 'enctype='multipart/form-data'>
+    <form method="post" action="write_action.php" enctype="multipart/form-data">
         <table style="padding-top:50px" align=center width=auto border=0 cellpadding=2>
             <tr>
                 <td style="height:40; float:center; background-color:#3C3C3C">
