@@ -118,12 +118,7 @@
         
 
         <tbody>
-            <?php
-            while ($rows = mysqli_fetch_assoc($result)) { 
-                if ($total % 2 == 0) {
-            ?>
-                  
-                    <?php } ?>
+          
                     <td width="50" align="center"><?php echo $total ?></td>
                     <td width="500" align="center">
                         <a href="read.php?number=<?php echo $rows['number'] ?>">
@@ -160,7 +155,7 @@
           { //만약 page가 1보다 크거나 같다면
             echo "<li class='fo_re'>처음</li>"; //처음이라는 글자에 빨간색 표시 
           }else{
-            echo "<li><a href='?page=1'>처음</a></li>"; //알니라면 처음글자에 1번페이지로 갈 수있게 링크
+            echo "<li><a href='?page=1'>처음</a></li>"; //아니라면 처음글자에 1번페이지로 갈 수있게 링크
           }
           if($page <= 1)
           { //만약 page가 1보다 크거나 같다면 빈값
