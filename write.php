@@ -48,7 +48,7 @@
 
 
 
-    <form method="post" action="write_action.php">
+    <form method="post" action="write_action.php" 'enctype='multipart/form-data'>
         <table style="padding-top:50px" align=center width=auto border=0 cellpadding=2>
             <tr>
                 <td style="height:40; float:center; background-color:#3C3C3C">
@@ -78,7 +78,7 @@
                     <center>
                         <input style="height:26px; width:47px; font-size:16px;" type="submit" value="작성">
                     </center>
-                    <form enctype='multipart/form-data' action='write_action.php' method='post'>
+                    
 	<input type='file' name='b_file'>
 	
 </form>
