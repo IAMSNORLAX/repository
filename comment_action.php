@@ -12,8 +12,8 @@ $pw = "anonymous";
 $URL = './read.php?number=$bno';                   
 
 $query1= "select * from board where number
-$query = "INSERT INTO comment where number=$bno (id, content, date, pw) 
-        values('$id','$content;','$date', '$pw')";
+$query = "INSERT INTO  comment (id, content, date, pw, com_num) 
+        values('$id','$content;','$date', '$pw','$bno')";
 
 
 
