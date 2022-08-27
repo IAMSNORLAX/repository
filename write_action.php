@@ -22,9 +22,7 @@ $query = "INSERT INTO board (number, title, content, date, hit, id,file,lock_pos
 $result = $connect->query($query);
 
 
-<?php
 
-$userpw = password_hash($_POST['pw'], PASSWORD_DEFAULT);
 if(isset($_POST['lockpost'])){
 	$lo_post = '1';
 }else{
@@ -45,6 +43,3 @@ if ($result) {
 
 mysqli_close($connect);
 ?>
-
-
-
