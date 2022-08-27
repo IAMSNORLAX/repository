@@ -41,9 +41,9 @@
         </thead>
         <?php
           $sql2 = query("select * from board where $catagory like '%$search_con%' order by number desc");
-          echo $catagory;
-          echo $search_con;
-          echo 1;
+          echo "$catagory";
+          echo "$search_con";
+          echo "1";
           while($board = $sql2->fetch_array()){
            
           $title=$board["title"]; 
