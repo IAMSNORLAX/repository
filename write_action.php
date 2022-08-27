@@ -32,7 +32,7 @@ $result = $connect->query($query);
 
 if ($result) {
 ?> <script>
-        alert("<?php echo $tmpfile ?>");
+        alert("<?php echo "게시글이 등록되었습니다." ?>");
         location.replace("<?php echo $URL ?>");
     </script>
 <?php
