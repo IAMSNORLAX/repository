@@ -47,14 +47,6 @@
 
 
 
-<form action = "board_create.php" method = "post" enctype="multipart/form-data">
-    <div class = "posting">
-        <input class = "posting_title" name = "create_title" type = "text" placeholder = "제목"/>
-        <textarea class = "posting_contents" name = "create_body" placeholder = "내용"></textarea>
-        <input class = "upload" name = "upload_file" type = "file" accept = "image/png, image/jpeg"/>
-        <input class = "writeBtn" type = "submit" value = "create">
-    </div>
-</form>
 
     <form method="post" action="write_action.php">
         <table style="padding-top:50px" align=center width=auto border=0 cellpadding=2>
