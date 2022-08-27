@@ -1,50 +1,9 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8"/>
-    </head>
- 
-    <?php
-        if(isset($_GET["postNum"]) && isset($_GET["prnt"])) {
-            $postNum = $_GET["postNum"];
-            $parent = $_GET["prnt"];
-        } else {
-    ?>    
-            <script>
-                alert("오류");
-                history.back();
-            </script>
-    <?php
-        }
- 
-        if(preg_match("/[^0-9]+/", $_GET["postNum"]) || preg_match("/[^0-9]+/", $_GET["prnt"])) {
-    ?>    
-            <script>
-                alert("No hack \'~\'");
-                history.back();
-            </script>
-    <?php
-        }
-    ?>
-    <body>
-        <div id = main align="center">    
-            <h2> 댓글 작성 </h2>
-        </div>
-            <form method="post" action="./comment.php?postNum=<?=\$postNum?>&prnt=<?=\$parent?>">
-                <table align="center">        
-                    <tr align="center">            
-                        <td> 
-                            <textarea type="text" style="resize:none;" cols="105" rows="15" name="cont"></textarea>
-                        <td>
-                    </tr>
- 
-                    <tr align="center">
-                        <td> 
-                            <input type="submit" value="작성"/>
-                        </td>
-                    <tr>
-                <table>        
-            </form>
-        </div>
-    </body>    
-</html>
+    <div class="dap_ins">
+        <form action="reply_ok.php?board_id=<?echo $board_id;?>&idx=<?php echo $bno; ?>" method="post">
+            <input type="hidden" name="dat_user" id="dat_user" class="dat_user" size="15" placeholder="아이디" value=<?$_SESSION['userid']?>>
+            <div style="margin-top:10px; ">
+                <textarea name="content" class="reply_content" id="re_content" ></textarea>
+                <button id="rep_bt" class="re_bt">댓글</button>
+            </div>
+        </form>
+    </div>
