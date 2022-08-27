@@ -176,7 +176,7 @@
 			<div style="margin-top:10px; ">
 				<textarea name="content" class="reply_content" id="re_content" ></textarea>
 				<button id="rep_bt" class="re_bt">댓글</button>
-				<button class="read_btn1" onclick="location.href='./comment_go'">댓글달기</button>&nbsp;&nbsp;
+				<button class="read_btn1" onclick="location.href='./comment_go.php'">댓글달기</button>&nbsp;&nbsp;
 				
 			</div>
 			
