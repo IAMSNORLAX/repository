@@ -117,11 +117,11 @@
         <tbody>
             <?php
             while ($rows = mysqli_fetch_assoc($result2)) { 
-                if ($row_num % 2 == 0) {
+                if ($rep_count % 2 == 0) {
             ?>
                   
                     <?php } ?>
-                    <td width="50" align="center"><?php echo $row_num ?></td>
+                    <td width="50" align="center"><?php echo $rep_count ?></td>
                     <td width="500" align="center">
                         <a href="read.php?number=<?php echo $rows['number'] ?>">
                             <?php echo $rows['title'] ?>
