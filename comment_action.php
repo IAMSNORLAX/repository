@@ -6,8 +6,10 @@ $title = $_POST['title'];
 $content = $_POST['content'];           
 $date = date('Y-m-d H:i:s');   
 $bno = $_GET['number'];
+$id = "anonymous";
+$pw = "anonymous";
 
-$URL = './index.php';                   
+$URL = './read.php?number=$bno';                   
 
 $query1= "select * from board where number
 $query = "INSERT INTO comment where number=$bno (id, content, date, pw) 
