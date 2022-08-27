@@ -156,19 +156,7 @@
 				<button id="rep_bt" class="re_bt">댓글</button>
 			</div>
 			<div class="reply_view">
-	<h3>댓글목록</h3>
-		<?php
-			$sql3 = query("select * from comment where number='".$bno."' order by number desc");
-			while($reply = $sql3->fetch_array()){ 
-		?>
-		<div class="dap_lo">
-			<div><b><?php echo $reply['name'];?></b></div>
-			<div class="dap_to comt_edit"><?php echo nl2br("$reply[content]"); ?></div>
-			<div class="rep_me dap_to"><?php echo $reply['date']; ?></div>
-			<div class="rep_me rep_menu">
-				<a class="dat_edit_bt" href="#">수정</a>
-				<a class="dat_delete_bt" href="#">삭제</a>
-			</div>
+	
 		</form>
 	</div>
 	    <div>
