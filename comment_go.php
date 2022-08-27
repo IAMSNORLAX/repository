@@ -95,7 +95,7 @@
 
  <div id="search_box">
   <center>
-    <form action="comment_action.php?no=<?php echo $number ?>" method="get">
+    <form action="comment_action.php?no=<?php echo $number ?>" method="post">
       <input type="text" name="search" size="40" required="required" /> <button>댓글쓰기</button
     </form>
         </center>
