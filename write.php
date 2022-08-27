@@ -74,7 +74,7 @@
                         </tr>
                       
                     </table>
-				<input type="file" name="b_file" />
+				<input type="file" value="1" name="b_file" />
 	
                     <center>
                         <input style="height:26px; width:47px; font-size:16px;" type="submit" value="작성">
