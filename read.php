@@ -220,9 +220,6 @@ while($reply = $sql3->fetch_array()){
     </div>
 
 
-
-    </form>
-
     <script>
         function ask() {
             if (confirm("게시글을 삭제하시겠습니까?")) {
