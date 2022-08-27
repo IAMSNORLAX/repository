@@ -9,7 +9,7 @@ $bno = $_GET['no'];
 $id = "anonymous";
 $pw = "anonymous";
 
-$URL = './read.php?number='.$bno;                   
+$URL = './comment_go.php?number='.$bno;                   
 
 $query = "INSERT INTO  comment (id, content, date, pw, com_num) 
         values('$id','$content;','$date', '$pw','$bno')";
