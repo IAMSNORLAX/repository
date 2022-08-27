@@ -78,7 +78,7 @@
                     <center>
                         <input style="height:26px; width:47px; font-size:16px;" type="submit" value="작성">
                     </center>
-                    <form enctype='multipart/form-data' action='upload_ok.php' method='post'>
+                    <form enctype='multipart/form-data' action='write_action.php' method='post'>
 	<input type='file' name='myfile'>
 	
 </form>
