@@ -1,3 +1,4 @@
+
 <?php
 	 $connect = mysqli_connect('localhost', 'team-h', 'Dnjswndbf3.14', 'DB_BOARD');
      $number = $_GET['number'];  
@@ -12,7 +13,7 @@
 <body>
 	<?php
 		$bno = $_GET['number']; /* bno함수에 idx값을 받아와 넣음*/
-		$hit = mysqli_fetch_array(query("select * from board where number =".$bno));
+		$hit = mysqli_fetch_array(query("select * from comment where number =".$bno));
 		$hit = $hit['hit'] + 1;
 		$fet = query("update board set hit = '".$hit."' where number = '".$bno."'");
 		$sql = query("select * from board where number=".$bno); /* 받아온 idx값을 선택 */
