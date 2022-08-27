@@ -160,6 +160,7 @@
 	    <div>
 파일 : <a href="./upload/<?php echo $rows['file'];?>" download><?php echo $rows['file']; ?></a>
 </div>
+
 	    
 
 </form>
