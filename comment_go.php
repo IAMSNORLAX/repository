@@ -46,15 +46,16 @@
 
 <body>
     <?php
+    session_start();
     $number = $_GET['no'];
     $connect = mysqli_connect('localhost', 'team-h', 'Dnjswndbf3.14', 'DB_BOARD') or die("connect failed");
     $query = "select * from comment where com_num = $number order by number desc";   
    
     $result = mysqli_query($connect, $query);
-    while ($reply = $result->fetch_array()) {
+  
     
 
-       session_start();
+       
 
     ?>
   
@@ -71,7 +72,7 @@
         </thead>
 
         <tbody>
-            
+                    <?php  while ($reply = $result->fetch_array()) { ?>
                     <td width="50" align="center"><?php echo $reply['number'] ?></td>
                     <td width="500" align="center">
                      
