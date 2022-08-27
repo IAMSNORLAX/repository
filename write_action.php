@@ -5,29 +5,21 @@ $id = $_POST['name'];
 $title = $_POST['title'];               
 $content = $_POST['content'];           
 $date = date('Y-m-d H:i:s');   
-$tmpfile =  $_FILES['b_file']['tmp_name'];
-$o_name = $_FILES['b_file']['name'];
-$filename = iconv("UTF-8", "EUC-KR",$_FILES['b_file']['name']);
-$folder = "../../upload/".$filename;
-move_uploaded_file($tmpfile,$folder);
+
 
 
 $URL = './index.php';                   
 
 
-$query = "INSERT INTO board (number, title, content, date, hit, id, file, lock_post) 
-        values(null,'$title', '$content', '$date', 0, '$id','$o_name', '$lo_post')";
+$query = "INSERT INTO board (number, title, content, date, hit, id) 
+        values(null,'$title', '$content', '$date', 0, '$id')";
 
 
 $result = $connect->query($query);
 
 
 
-if(isset($_POST['lockpost'])){
-	$lo_post = '1';
-}else{
-	$lo_post = '0';
-}
+
 
 
 
