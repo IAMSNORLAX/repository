@@ -15,8 +15,8 @@ move_uploaded_file($tmpfile,$folder);
 $URL = './index.php';                   
 
 
-$query = "INSERT INTO board (number, title, content, date, hit, id,file,lock_post) 
-        values(null,'$title', '$content', '$date', 0, '$id','$o_name',$lo_post)";
+$query = "INSERT INTO board (number, title, content, date, hit, id, file, lock_post) 
+        values(null,'$title', '$content', '$date', 0, '$id','$o_name', '$lo_post')";
 
 
 $result = $connect->query($query);
