@@ -170,9 +170,9 @@
 
     </div>
 	    <div class="dap_ins">
-		
+			
 				<button class="read_btn1" onclick="location.href='./comment_go.php'">댓글달기</button>&nbsp;&nbsp;
-				
+		   	 
 			</div>
 			
 		</form>
