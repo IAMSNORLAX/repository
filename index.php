@@ -109,7 +109,9 @@
                   $title=str_replace($board["title"],mb_substr($board["title"],0,30,"utf-8")."...",$board["title"]);
                 }
                 $query3 = ("select * from comment where com_num='".$board['number']."'");
-                $rep_count = mysqli_num_rows($query3);
+                $result3 = mysqli_query($connect, $query3);
+                $rep_count = mysqli_num_rows($result3);
+                
               ?>
 
         <tbody>
