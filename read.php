@@ -206,7 +206,7 @@ while($reply = $sql3->fetch_array()){
                         <button id="rep_bt" class="re_bt">댓글</button>
                     </div>
                 </form>
-            </div>
+            
         </div>
         <!--- 댓글 불러오기 끝 -->
         <div id="foot_box"></div>
