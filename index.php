@@ -86,7 +86,8 @@
               $page = 1;
             }
               $query1 = ("select * from board");
-              $total1 = mysqli_num_rows($query1); //게시판 총 레코드 수
+              $result1 = mysqli_query($connect, $query1); //게시판 총 레코드 수
+              $total1 = mysqli_num_rows($result1);
               $list = 10; //한 페이지에 보여줄 개수
               $block_ct = 5; //블록당 보여줄 페이지 개수
 
@@ -100,7 +101,8 @@
               $start_num = ($page-1) * $list; //시작번호 (page-1)에서 $list를 곱한다.
 
               $query2 = ("select * from board order by number desc limit $start_num, $list");  
-              while($board = $query2->fetch_array()){
+              $result2 = mysqli_query($connect, $query2);
+              while($board = $result2->fetch_array()){
               $title=$board["title"]; 
                 if(strlen($title)>30)
                 { 
@@ -197,3 +199,7 @@
 </body>
 
 </html>
+
+
+
+
