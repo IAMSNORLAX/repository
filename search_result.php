@@ -40,7 +40,7 @@
         <?php
           $query = ("select * from board where $catagory like '%$search_con%' order by number desc");
           $result = $connect->query($query);
-          while($board = $query->fetch_array()){
+          while($board = $result->fetch_array()){
            
           $title=$board["title"]; 
             if(strlen($title)>30)
