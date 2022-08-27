@@ -32,7 +32,7 @@
     <table class="list-table">
       <thead>
           <tr>
-              <th width="70"> <?php echo mysql_errno;?></th>
+              <th width="70"> 번호</th>
                 <th width="500">제목</th>
                 <th width="120">글쓴이</th>
                 <th width="100">작성일</th>
@@ -41,6 +41,7 @@
         </thead>
         <?php
           $sql2 = query("select * from board where $catagory like '%$search_con%' order by number desc");
+      <?php echo mysql_error;?>
           while($board = $sql2->fetch_array()){
            
           $title=$board["title"]; 
