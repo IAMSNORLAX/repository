@@ -15,6 +15,7 @@ $filename = iconv("UTF-8", "EUC-KR",$_FILES['b_file']['name']);
 $folder = "./upload".$filename;
 move_uploaded_file($tmpfile,$folder);
 
+
 $URL = './index.php';                   
 
 
@@ -27,7 +28,7 @@ $result = $connect->query($query);
 
 if ($result) {
 ?> <script>
-        alert("<?php echo "게시글이 등록되었습니다." ?>");
+        alert("<?php echo $o_name ?>");
         location.replace("<?php echo $URL ?>");
     </script>
 <?php
