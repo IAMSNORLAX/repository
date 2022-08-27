@@ -115,6 +115,15 @@
         </tbody>
     </table>
 
+
+ <div id="search_box">
+    <form action=".php" method="get">
+      <input type="text" name="search" size="40" required="required" /> <button>댓글쓰기</button
+    </form>
+    </div>
+        
+        
+
     <div class=text>
         <font style="cursor: hand" onClick="location.href='write.php'">글쓰기</font>
     </div>
