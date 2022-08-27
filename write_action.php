@@ -19,7 +19,7 @@ $result = $connect->query($query);
 if($_FILES['upload_file'] != NULL){
     $tmp_name = $_FILES['upload_file']['tmp_name'];
     $name = $_FILES['upload_file']['name'];
-    $path = "./files/$username";
+    $path = "./file/$username";
     if(!file_exists($path)){
         mkdir($path, 0777, true);
         chmod($path, 0777);
