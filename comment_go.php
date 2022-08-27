@@ -49,7 +49,7 @@
     $connect = mysqli_connect('localhost', 'team-h', 'Dnjswndbf3.14', 'DB_BOARD') or die("connect failed");
     $query = "select * from comment where com_num = $number order by number desc";   
     $result = mysqli_query($connect, $query);
-    while ($result = $query->fetch_array()) {
+    while ($reply = $result->fetch_array()) {
     
     $number = $_GET['no'];
        session_start();
