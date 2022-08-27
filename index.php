@@ -79,24 +79,23 @@
                 <td width="50" align="center">조회수</td>
             </tr>
         </thead>
-
-            <?php
+        <?php
          if(isset($_GET['page'])){
           $page = $_GET['page'];
             }else{
               $page = 1;
             }
               $query1 = ("select * from board");
-              $result1 = mysqli_query($connect, $query1); //게시판 총 레코드 수
-              $total1 = mysqli_num_rows($result1);
-              $list = 10; //한 페이지에 보여줄 개수
+              $result1 = mysqli_query($connect, $query1);
+              $row_num = mysqli_num_rows($result1); //게시판 총 레코드 수
+              $list = 5; //한 페이지에 보여줄 개수
               $block_ct = 5; //블록당 보여줄 페이지 개수
 
               $block_num = ceil($page/$block_ct); // 현재 페이지 블록 구하기
               $block_start = (($block_num - 1) * $block_ct) + 1; // 블록의 시작번호
               $block_end = $block_start + $block_ct - 1; //블록 마지막 번호
 
-              $total_page = ceil($total1 / $list); // 페이징한 페이지 수 구하기
+              $total_page = ceil($row_num / $list); // 페이징한 페이지 수 구하기
               if($block_end > $total_page) $block_end = $total_page; //만약 블록의 마지박 번호가 페이지수보다 많다면 마지박번호는 페이지 수
               $total_block = ceil($total_page/$block_ct); //블럭 총 개수
               $start_num = ($page-1) * $list; //시작번호 (page-1)에서 $list를 곱한다.
@@ -109,16 +108,17 @@
                 { 
                   $title=str_replace($board["title"],mb_substr($board["title"],0,30,"utf-8")."...",$board["title"]);
                 }
-                $con_idx = $board["number"];
-                $query3=("SELECT COUNT(*) as cnt FROM reply where con_num=$con_idx");
-                $reply_count = mysqli_query($connect, $query3);
-                $rep_count = mysqli_num_rows($reply_count);
-            
+                $query3 = ("select * from comment where com_num='".$board['number']."'");
+                $rep_count = mysqli_num_rows($query3);
               ?>
-        
 
         <tbody>
-          
+            <?php
+            while ($rows = mysqli_fetch_assoc($result)) { 
+                if ($total % 2 == 0) {
+            ?>
+                  
+                    <?php } ?>
                     <td width="50" align="center"><?php echo $total ?></td>
                     <td width="500" align="center">
                         <a href="read.php?number=<?php echo $rows['number'] ?>">
@@ -132,6 +132,7 @@
                 $total--;
             }
                 ?>
+                
 
     
       <div id="search_box">
@@ -144,10 +145,10 @@
         </select> 
     </form>
     </div>
+
         </tbody>
         <?php } ?>
     </table>
-
     <div id="page_num">
       <ul>
         <?php
@@ -155,7 +156,7 @@
           { //만약 page가 1보다 크거나 같다면
             echo "<li class='fo_re'>처음</li>"; //처음이라는 글자에 빨간색 표시 
           }else{
-            echo "<li><a href='?page=1'>처음</a></li>"; //아니라면 처음글자에 1번페이지로 갈 수있게 링크
+            echo "<li><a href='?page=1'>처음</a></li>"; //알니라면 처음글자에 1번페이지로 갈 수있게 링크
           }
           if($page <= 1)
           { //만약 page가 1보다 크거나 같다면 빈값
@@ -196,7 +197,3 @@
 </body>
 
 </html>
-
-
-
-
