@@ -121,7 +121,7 @@
               $total_block = ceil($total_page/$block_ct); //블럭 총 개수
               $start_num = ($page-1) * $list; //시작번호 (page-1)에서 $list를 곱한다.
 
-              $sql2 = query("select * from board order by idx desc limit $start_num, $list");  
+              $sql2 = query("select * from board order by number desc limit $start_num, $list");  
               while($board = $sql2->fetch_array()){
               $title=$board["title"]; 
                 if(strlen($title)>30)
@@ -132,7 +132,8 @@
                 $reply_count = query("SELECT COUNT(*) as cnt FROM reply where con_num=$con_idx");
                 $rep_count = $reply_count->fetch_array();
             }
-              ?>
+            ?>
+            
     
       <div id="search_box">
     <form action="search_result.php" method="get">
