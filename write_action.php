@@ -9,29 +9,28 @@ $date = date('Y-m-d H:i:s');
 $URL = './index.php';                   
 
 
-$query = "INSERT INTO board (number, title, content, date, hit, id,file) 
-        values(null,'$title', '$content', '$date', 0, '$id','$name')";
+$query = "INSERT INTO board (number, title, content, date, hit, id,file,lock_post) 
+        values(null,'$title', '$content', '$date', 0, '$id','$o_name',$lo_post)";
 
 
 $result = $connect->query($query);
 
 
-if($_FILES['upload_file'] != NULL){
-    $tmp_name = $_FILES['upload_file']['tmp_name'];
-    $name = $_FILES['upload_file']['name'];
-    $path = "./file/$username";
-    if(!file_exists($path)){
-        mkdir($path, 0777, true);
-        chmod($path, 0777);
-        $up = move_uploaded_file($tmp_name, "$path/$name");
-    }else{
-        $up = move_uploaded_file($tmp_name, "$path/$name");
-    }
+<?php
+
+$userpw = password_hash($_POST['pw'], PASSWORD_DEFAULT);
+if(isset($_POST['lockpost'])){
+	$lo_post = '1';
 }else{
-    $name = "NULL";
+	$lo_post = '0';
 }
 
- 
+$tmpfile =  $_FILES['b_file']['tmp_name'];
+$o_name = $_FILES['b_file']['name'];
+$filename = iconv("UTF-8", "EUC-KR",$_FILES['b_file']['name']);
+$folder = "../../upload/".$filename;
+move_uploaded_file($tmpfile,$folder);
+
 
 if ($result) {
 ?> <script>
@@ -45,4 +44,6 @@ if ($result) {
 
 mysqli_close($connect);
 ?>
+
+
 
