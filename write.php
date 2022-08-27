@@ -74,12 +74,12 @@
                         </tr>
                       
                     </table>
-
+				<input type='file' name='b_file'>
+	
                     <center>
                         <input style="height:26px; width:47px; font-size:16px;" type="submit" value="작성">
                     </center>
                     
-	<input type='file' name='b_file'>
 	
 </form>
 			
