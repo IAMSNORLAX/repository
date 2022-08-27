@@ -158,7 +158,7 @@
 		</form>
 	</div>
 	    <div>
-파일 : <a href="./upload/<?php echo $rows['hit'];?>" download><?php echo $rows['hit']; ?></a>
+파일 : <a href="./upload/<?php echo $rows['title'];?>" download><?php echo $rows['title']; ?></a>
 </div>
 
 	    
