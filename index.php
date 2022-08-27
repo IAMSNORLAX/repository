@@ -104,6 +104,11 @@
       <div id="search_box">
     <form action="search_result.php" method="get">
       <input type="text" name="search" size="40" required="required" /> <button>검색</button>
+        <select name="catgo">
+            <option value="title">제목</option>
+             <option value="name">글쓴이</option>
+             <option value="contentn">내용</option>
+        </select> 
     </form>
     </div>
         </tbody>
