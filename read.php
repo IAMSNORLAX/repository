@@ -210,7 +210,7 @@ while($reply = $sql3->fetch_array()){
         </div>
         <!--- 댓글 불러오기 끝 -->
         <div id="foot_box"></div>
-    </div>
+   
 
 
     <div>
