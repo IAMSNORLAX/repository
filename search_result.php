@@ -38,10 +38,9 @@
             </tr>
         </thead>
         <?php
-          $sql2 = query("select * from board where $catagory like '%$search_con%' order by number desc");
-           $result = mysqli_query($connect, $query);
-            $total = mysqli_num_rows($result); 
-          while($board = $sql2->fetch_array()){
+          $query = ("select * from board where $catagory like '%$search_con%' order by number desc");
+           $connect->query($query);
+          while($board = $query->fetch_array()){
            
           $title=$board["title"]; 
             if(strlen($title)>30)
