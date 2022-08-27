@@ -1,7 +1,7 @@
 <?php
 $connect = mysqli_connect("localhost", "team-h", "Dnjswndbf3.14", "DB_BOARD") or die("fail");
 
-$id = $_POST['name'];                 
+                 
 $title = $_POST['title'];               
 $content = $_POST['content'];           
 $date = date('Y-m-d H:i:s');   
@@ -20,7 +20,7 @@ $URL = './index.php';
 
 
 $query = "INSERT INTO board (title, content, date, hit, id,file) 
-        values('$title', '$content', '$date', 0, '$id','$o_name')";
+        values('$title', '$content', '$date', 0, '$_POST['name']','$o_name')";
 
 
 $result = $connect->query($query);
