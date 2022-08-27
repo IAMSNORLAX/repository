@@ -20,7 +20,8 @@ $URL = './index.php';
 
 
 $query = "INSERT INTO board (title, content, date, hit, id,file) 
-        values('$title', '$content', '$date', 0, '$_POST['name']','$o_name')";
+        values('".$title."', '".$content."', '".$date."', 0, '".$_POST['name']."','".$o_name."')";
+
 
 
 $result = $connect->query($query);
