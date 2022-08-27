@@ -10,7 +10,8 @@ $date = date('Y-m-d H:i:s');
 //$userpw = password_hash($_POST['pw'], PASSWORD_DEFAULT);
 
 $tmpfile =  $_FILES['b_file']['tmp_name'];
-$o_name = $_FILES['b_file']['name'];
+//$o_name = $_FILES['b_file']['name'];
+$0_name = "
 $filename = iconv("UTF-8", "EUC-KR",$_FILES['b_file']['name']);
 $folder = "./upload/".$filename;
 move_uploaded_file($tmpfile,$folder);
@@ -19,8 +20,9 @@ move_uploaded_file($tmpfile,$folder);
 $URL = './index.php';                   
 
 
-$query = "INSERT INTO board (title, content, date, hit, id,file) 
+$query = "INSERT INTO board (title, content, date, hit, id, file) 
         values('".$title."', '".$content."', '".$date."', 0, '".$_POST['name']."','".$o_name."')";
+
 
 
 
