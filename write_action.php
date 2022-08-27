@@ -15,6 +15,8 @@ $filename = iconv("UTF-8", "EUC-KR",$_FILES['b_file']['name']);
 $folder = "./upload/".$filename;
 move_uploaded_file($tmpfile,$folder);
 
+echo "$tmpfile";
+
 
 $URL = './index.php';                   
 
