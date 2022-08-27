@@ -109,11 +109,11 @@
 
 
  <div id="search_box">
-      <td align="center">번호
+  <center>
     <form action=".php" method="get">
       <input type="text" name="search" size="40" required="required" /> <button>댓글쓰기</button
     </form>
-        </td>
+        </center>
     </div>
         
         
