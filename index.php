@@ -88,7 +88,7 @@
               $query1 = ("select * from board");
               $result1 = mysqli_query($connect, $query1);
               $row_num = mysqli_num_rows($result1); //게시판 총 레코드 수
-              $list = 5; //한 페이지에 보여줄 개수
+              $list = 4; //한 페이지에 보여줄 개수
               $block_ct = 5; //블록당 보여줄 페이지 개수
 
               $block_num = ceil($page/$block_ct); // 현재 페이지 블록 구하기
@@ -98,7 +98,7 @@
               $total_page = ceil($row_num / $list); // 페이징한 페이지 수 구하기
               if($block_end > $total_page) $block_end = $total_page; //만약 블록의 마지박 번호가 페이지수보다 많다면 마지박번호는 페이지 수
               $total_block = ceil($total_page/$block_ct); //블럭 총 개수
-              $start_num = ($page) * $list; //시작번호 (page-1)에서 $list를 곱한다.
+              $start_num = ($page-1) * $list; //시작번호 (page-1)에서 $list를 곱한다.
 
               $query2 = ("select * from board order by number desc limit $start_num, $list");  
               $result2 = mysqli_query($connect, $query2);
