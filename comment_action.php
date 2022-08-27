@@ -5,12 +5,12 @@ $connect = mysqli_connect("localhost", "team-h", "Dnjswndbf3.14", "DB_BOARD") or
 $title = $_POST['title'];               
 $content = $_POST['content'];           
 $date = date('Y-m-d H:i:s');   
-
+$bno = $_GET['number'];
 
 $URL = './index.php';                   
 
 
-$query = "INSERT INTO comment (id, content, date, pw) 
+$query = "INSERT INTO comment where number=$bno (id, content, date, pw) 
         values('$id','$content;','$date', '$pw')";
 
 
