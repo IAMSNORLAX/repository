@@ -6,8 +6,7 @@ $title = $_POST['title'];
 $content = $_POST['content'];           
 $date = date('Y-m-d H:i:s');   
 
-//include $_SERVER['DOCUMENT_ROOT']."/db.php";
-//$userpw = password_hash($_POST['pw'], PASSWORD_DEFAULT);
+
 
 $tmpfile =  $_FILES['b_file']['tmp_name'];
 $o_name = $_FILES['b_file']['name'];
