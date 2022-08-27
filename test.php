@@ -34,7 +34,7 @@
             </tr>
         </thead>
         <?php
-          $sql2 = mq("select * from board where $catagory like '%$search_con%' order by idx desc");
+          $sql2 = mq("select * from DB_BOARD where board like '%$search_con%' order by number desc");
           while($board = $sql2->fetch_array()){
            
           $title=$board["title"]; 
