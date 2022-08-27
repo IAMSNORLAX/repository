@@ -72,13 +72,13 @@
 
         <tbody>
             
-                    <td width="50" align="center"><?php echo $total ?></td>
+                    <td width="50" align="center"><?php echo $reply['number'] ?></td>
                     <td width="500" align="center">
-                        <a href="read.php?number=<?php echo $reply['number'] ?>">
+                     
                             <?php echo $reply['content'] ?>
                     </td>
-                    <td width="100" align="center"><?php echo $reply['content'] ?></td>
-                    <td width="200" align="center"><?php echo $rows['pw'] ?></td>
+                    <td width="100" align="center"><?php echo $reply['id'] ?></td>
+                    <td width="200" align="center"><?php echo $reply['date'] ?></td>
                    
                     </tr>
                 <?php
