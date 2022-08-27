@@ -32,7 +32,7 @@
     <table class="list-table">
       <thead>
           <tr>
-              <th width="70"><?php echo $catagory;?></th>
+              <th width="70"><?php echo $search_con;?></th>
                 <th width="500">제목</th>
                 <th width="120">글쓴이</th>
                 <th width="100">작성일</th>
