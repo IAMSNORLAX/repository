@@ -47,27 +47,15 @@
 <body>
     <?php
     $connect = mysqli_connect('localhost', 'team-h', 'Dnjswndbf3.14', 'DB_BOARD') or die("connect failed");
-    $query = "select * from comment order by number desc";   
+    $query = "select * from comment where com_num = $number order by number desc";   
     $result = mysqli_query($connect, $query);
-    $total = mysqli_num_rows($result);  
+    while ($result = $query->fetch_array()) {
+    
+    $number = $_GET['no'];
        session_start();
 
-    if (isset($_SESSION['userid'])) {
-    ?><b><?php echo $_SESSION['userid']; ?></b>님 반갑습니다.
-        <button onclick="location.href='logout.php'" style="float:right; font-size:15.5px;">로그아웃</button>
-        <br />
-    <?php
-    } else {
     ?>
-        <button onclick="location.href='login.php'" style="float:right; font-size:15.5px;">로그인</button>
-        <br />
-    
-    
-    
-    <?php
-    }
-    ?>
-    
+  
     <p style="font-size:25px; text-align:center"><b>댓글</b></p>
     <table align=center>
         <thead align="center">
@@ -81,23 +69,18 @@
         </thead>
 
         <tbody>
-            <?php
-            while ($rows = mysqli_fetch_assoc($result)) { 
-                if ($total % 2 == 0) {
-            ?>
-                  
-                    <?php } ?>
+            
                     <td width="50" align="center"><?php echo $total ?></td>
                     <td width="500" align="center">
-                        <a href="read.php?number=<?php echo $rows['number'] ?>">
-                            <?php echo $rows['id'] ?>
+                        <a href="read.php?number=<?php echo $reply['number'] ?>">
+                            <?php echo $reply['content'] ?>
                     </td>
-                    <td width="100" align="center"><?php echo $rows['content'] ?></td>
+                    <td width="100" align="center"><?php echo $reply['content'] ?></td>
                     <td width="200" align="center"><?php echo $rows['pw'] ?></td>
                    
                     </tr>
                 <?php
-                $total--;
+               
             }
                 ?>
 
@@ -110,7 +93,7 @@
 
  <div id="search_box">
   <center>
-    <form action="comment_action.php" method="get">
+    <form action="comment_action.php?no=<?php echo $number ?>" method="get">
       <input type="text" name="search" size="40" required="required" /> <button>댓글쓰기</button
     </form>
         </center>
