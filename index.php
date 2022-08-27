@@ -78,6 +78,7 @@
                 <td width="200" align="center">날짜</td>
                 <td width="50" align="center">조회수</td>
             </tr>
+        </thead>
 
             <?php
          if(isset($_GET['page'])){
@@ -111,10 +112,10 @@
                 $con_idx = $board["number"];
                 $query3=("SELECT COUNT(*) as cnt FROM reply where con_num=$con_idx");
                 $reply_count = mysqli_query($connect, $query3);
-                $rep_count = $reply_count->fetch_array();
+                $rep_count = $mysqli_num_rows($reply_count);
             
               ?>
-        </thead>
+        
 
         <tbody>
             <?php
