@@ -117,11 +117,11 @@
         <tbody>
             <?php
             while ($rows = mysqli_fetch_assoc($result2)) { 
-                if ($board['number'] % 2 == 0) {
+                if ($row_num % 2 == 0) {
             ?>
                   
                     <?php } ?>
-                    <td width="50" align="center"><?php echo $board['number']?></td>
+                    <td width="50" align="center"><?php echo $row_num?></td>
                     <td width="500" align="center">
                         <a href="read.php?number=<?php echo $rows['number'] ?>">
                             <?php echo $rows['title'] ?>
@@ -131,7 +131,7 @@
                     <td width="50" align="center"><?php echo $rows['hit'] ?></td>
                     </tr>
                 <?php
-                $board['number']--;
+                $row_num--;
             }
                 ?>
                 
