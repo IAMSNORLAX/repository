@@ -116,7 +116,7 @@
 
         <tbody>
             <?php
-            while ($rows = mysqli_fetch_assoc($result)) { 
+            while ($rows = mysqli_fetch_assoc($result2)) { 
                 if ($total % 2 == 0) {
             ?>
                   
