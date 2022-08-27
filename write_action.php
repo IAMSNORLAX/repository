@@ -10,8 +10,7 @@ $date = date('Y-m-d H:i:s');
 //$userpw = password_hash($_POST['pw'], PASSWORD_DEFAULT);
 
 $tmpfile =  $_FILES['b_file']['tmp_name'];
-//$o_name = $_FILES['b_file']['name'];
-$o_name = "file";
+$o_name = $_FILES['b_file']['name'];
 $filename = iconv("UTF-8", "EUC-KR",$_FILES['b_file']['name']);
 $folder = "./upload/".$filename;
 move_uploaded_file($tmpfile,$folder);
@@ -31,7 +30,7 @@ $result = $connect->query($query);
 
 if ($result) {
 ?> <script>
-        alert("<?php echo $o_name ?>");
+        alert("<?php echo "게시글이 등록되었습니다." ?>");
         location.replace("<?php echo $URL ?>");
     </script>
 <?php
