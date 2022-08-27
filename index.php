@@ -109,7 +109,8 @@
                   $title=str_replace($board["title"],mb_substr($board["title"],0,30,"utf-8")."...",$board["title"]);
                 }
                 $con_idx = $board["number"];
-                $reply_count = query("SELECT COUNT(*) as cnt FROM reply where con_num=$con_idx");
+                $query3=("SELECT COUNT(*) as cnt FROM reply where con_num=$con_idx");
+                $reply_count = mysqli_query($connect, $query3);
                 $rep_count = $reply_count->fetch_array();
             
               ?>
