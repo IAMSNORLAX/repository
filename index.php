@@ -88,7 +88,7 @@
               $query1 = ("select * from board");
               $result1 = mysqli_query($connect, $query1);
               $row_num = mysqli_num_rows($result1); //게시판 총 레코드 수
-              $list = 4; //한 페이지에 보여줄 개수
+              $list = 5; //한 페이지에 보여줄 개수
               $block_ct = 5; //블록당 보여줄 페이지 개수
 
               $block_num = ceil($page/$block_ct); // 현재 페이지 블록 구하기
@@ -117,11 +117,11 @@
         <tbody>
             <?php
             while ($rows = mysqli_fetch_assoc($result2)) { 
-                if ($row_num % 2 == 0) {
+                if ($board['number'] % 2 == 0) {
             ?>
                   
                     <?php } ?>
-                    <td width="50" align="center"><?php echo $row_num?></td>
+                    <td width="50" align="center"><?php echo $board['number']?></td>
                     <td width="500" align="center">
                         <a href="read.php?number=<?php echo $rows['number'] ?>">
                             <?php echo $rows['title'] ?>
@@ -131,7 +131,7 @@
                     <td width="50" align="center"><?php echo $rows['hit'] ?></td>
                     </tr>
                 <?php
-                $row_num--;
+                $board['number']--;
             }
                 ?>
                 
