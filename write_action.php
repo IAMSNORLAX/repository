@@ -9,13 +9,17 @@ $date = date('Y-m-d H:i:s');
 //include $_SERVER['DOCUMENT_ROOT']."/db.php";
 //$userpw = password_hash($_POST['pw'], PASSWORD_DEFAULT);
 
-
+$tmpfile =  $_FILES['b_file']['tmp_name'];
+$o_name = $_FILES['b_file']['name'];
+$filename = iconv("UTF-8", "EUC-KR",$_FILES['b_file']['name']);
+$folder = "../../upload/".$filename;
+move_uploaded_file($tmpfile,$folder);
 
 $URL = './index.php';                   
 
 
-$query = "INSERT INTO board (number, title, content, date, hit, id,file) 
-        values(null,'$title', '$content', '$date', 0, '$id','$o_name')";
+$query = "INSERT INTO board (title, content, date, hit, id,file) 
+        values('$title', '$content', '$date', 0, '$id','$o_name')";
 
 
 $result = $connect->query($query);
