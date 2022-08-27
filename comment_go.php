@@ -68,12 +68,12 @@
     }
     ?>
     
-    <p style="font-size:25px; text-align:center"><b>게시판</b></p>
+    <p style="font-size:25px; text-align:center"><b>댓글</b></p>
     <table align=center>
         <thead align="center">
             <tr>
                 <td width="50" align="center">번호</td>
-                <td width="500" align="center">제목</td>
+                <td width="500" align="center">댓글</td>
                 <td width="100" align="center">작성자</td>
                 <td width="200" align="center">날짜</td>
          
@@ -90,10 +90,10 @@
                     <td width="50" align="center"><?php echo $total ?></td>
                     <td width="500" align="center">
                         <a href="read.php?number=<?php echo $rows['number'] ?>">
-                            <?php echo $rows['title'] ?>
+                            <?php echo $rows['id'] ?>
                     </td>
-                    <td width="100" align="center"><?php echo $rows['id'] ?></td>
-                    <td width="200" align="center"><?php echo $rows['date'] ?></td>
+                    <td width="100" align="center"><?php echo $rows['content'] ?></td>
+                    <td width="200" align="center"><?php echo $rows['pw'] ?></td>
                    
                     </tr>
                 <?php
