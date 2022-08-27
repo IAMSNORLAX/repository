@@ -176,6 +176,7 @@
 			<div style="margin-top:10px; ">
 				<textarea name="content" class="reply_content" id="re_content" ></textarea>
 				<button id="rep_bt" class="re_bt">댓글</button>
+				
 			</div>
 			
 		</form>
