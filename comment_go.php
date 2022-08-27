@@ -110,7 +110,7 @@
 
  <div id="search_box">
   <center>
-    <form action=".php" method="get">
+    <form action="comment_action.php" method="get">
       <input type="text" name="search" size="40" required="required" /> <button>댓글쓰기</button
     </form>
         </center>
