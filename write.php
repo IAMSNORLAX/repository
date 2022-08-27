@@ -82,6 +82,9 @@
 	<input type='file' name='myfile'>
 	
 </form>
+			<div id="in_file">
+                        <input type="file" value="1" name="b_file" />
+                    </div>
                 </td>
             </tr>
         </table>
