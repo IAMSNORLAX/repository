@@ -100,7 +100,7 @@
     $connect = mysqli_connect('localhost', 'team-h', 'Dnjswndbf3.14', 'DB_BOARD');
     $number = $_GET['number'];  
     session_start();
-    $query = "select title, content, date, hit, id from board where number = $number";
+    $query = "select title, content, date, hit, id, file from board where number = $number";
     $result = $connect->query($query);
     $rows = mysqli_fetch_assoc($result);
 
@@ -158,7 +158,7 @@
 		</form>
 	</div>
 	    <div>
-파일 : <a href="./upload/<?php echo $rows['title'];?>" download><?php echo $rows['title']; ?></a>
+파일 : <a href="./upload/<?php echo $rows['file'];?>" download><?php echo $rows['file']; ?></a>
 </div>
 
 	    
