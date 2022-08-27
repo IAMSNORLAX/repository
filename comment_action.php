@@ -3,7 +3,7 @@ $connect = mysqli_connect("localhost", "team-h", "Dnjswndbf3.14", "DB_BOARD") or
 
                  
             
-$content = $_GET['search'];           
+$content = $_POST['search'];           
 $date = date('Y-m-d H:i:s');   
 $bno = $_GET['no'];
 $id = "anonymous";
