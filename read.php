@@ -153,7 +153,7 @@
         if (isset($_SESSION['userid']) and $_SESSION['userid'] == $rows['id']) { ?>
         <button class="read_btn1" onclick="location.href='./modify.php?number=<?= $number ?>'">수정</button>&nbsp;&nbsp;
         <button class="read_btn1" a onclick="ask();">삭제</button>
-
+    </div>
         <!--- 댓글 불러오기 -->
         <div class="reply_view">
             <h3>댓글목록</h3>
