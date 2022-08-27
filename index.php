@@ -98,7 +98,7 @@
               $total_page = ceil($row_num / $list); // 페이징한 페이지 수 구하기
               if($block_end > $total_page) $block_end = $total_page; //만약 블록의 마지박 번호가 페이지수보다 많다면 마지박번호는 페이지 수
               $total_block = ceil($total_page/$block_ct); //블럭 총 개수
-              $start_num = ($page-1) * $list; //시작번호 (page-1)에서 $list를 곱한다.
+              $start_num = ($page) * $list; //시작번호 (page-1)에서 $list를 곱한다.
 
               $query2 = ("select * from board order by number desc limit $start_num, $list");  
               $result2 = mysqli_query($connect, $query2);
