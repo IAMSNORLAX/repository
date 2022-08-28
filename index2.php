@@ -47,7 +47,7 @@
 <body>
     <?php
     $connect = mysqli_connect('localhost', 'team-h', 'Dnjswndbf3.14', 'DB_BOARD') or die("connect failed");
-    $query = "select * from board order by number desc";   
+    $query = "select * from board order by number asc";   
     $result = mysqli_query($connect, $query);
     $total = mysqli_num_rows($result);  
        session_start();
