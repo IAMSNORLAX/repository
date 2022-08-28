@@ -145,7 +145,7 @@
     </div>
 
         </tbody>
-        <?php } ?>
+       
     </table>
     <div id="page_num">
       <ul>
