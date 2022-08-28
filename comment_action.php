@@ -12,7 +12,7 @@ $pw = "anonymous";
 $URL = './read.php?number='.$bno;                   
 
 $query = "INSERT INTO  comment (id, content, date, pw, com_num) 
-        values('$id','$content;','$date', '$pw','$bno')";
+        values('$id','$content','$date', '$pw','$bno')";
 
 
 
