@@ -85,6 +85,7 @@
             }else{
               $page = 1;
             }
+              $indexnumber = 1;
               $query1 = ("select * from board");
               $result1 = mysqli_query($connect, $query1);
               $row_num = mysqli_num_rows($result1); //게시판 총 레코드 수
@@ -121,7 +122,7 @@
             ?>
                   
                     <?php } ?>
-                    <td width="50" align="center"><?php echo $rows['number']?></td>
+                    <td width="50" align="center"><?php echo $indexnumber++?></td>
                     <td width="500" align="center">
                         <a href="read.php?number=<?php echo $rows['number'] ?>">
                             <?php echo $rows['title'] ?>
