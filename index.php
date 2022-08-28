@@ -79,13 +79,15 @@
                 <td width="50" align="center">조회수</td>
             </tr>
         </thead>
+       
         <?php
+        $indexnumber = 1;
          if(isset($_GET['page'])){
           $page = $_GET['page'];
             }else{
               $page = 1;
             }
-              $indexnumber = 1;
+              
               $query1 = ("select * from board");
               $result1 = mysqli_query($connect, $query1);
               $row_num = mysqli_num_rows($result1); //게시판 총 레코드 수
@@ -195,3 +197,5 @@
 </body>
 
 </html>
+
+
