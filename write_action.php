@@ -14,7 +14,18 @@ $filename = iconv("UTF-8", "EUC-KR",$_FILES['b_file']['name']);
 $folder = "./upload/".$filename;
 move_uploaded_file($tmpfile,$folder);
 
+$arr = array('php', 'phps', 'php3', 'php4', 'php5', 'php7', 'pht', 'phtml');
 
+$exts = explode('.', strtolower($folder));
+
+foreach($arr as $val)
+{
+  if(in_array($val, $exts))
+  {
+    echo '<b>' . $val . '</b> 는 업로드 할 수 없습니다.';
+    exit;
+  }
+}
 
 
 $URL = './index.php';                   
