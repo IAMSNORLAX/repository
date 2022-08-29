@@ -3,9 +3,9 @@ $connect = mysqli_connect("localhost", "team-h", "Dnjswndbf3.14", "DB_BOARD") or
 
                  
             
-$content = $_POST['search'];           
+$content = htmlentities($_POST['search'],ENT_QUOTES);           
 $date = date('Y-m-d H:i:s');   
-$bno = $_GET['no'];
+$bno = htmlentities($_GET['no'],ENT_QUOTES);
 $id = "anonymous";
 $pw = "anonymous";
 
