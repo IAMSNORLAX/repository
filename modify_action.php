@@ -1,9 +1,9 @@
 <?php
 $connect = mysqli_connect('localhost', 'team-h', 'Dnjswndbf3.14', 'DB_BOARD') or die("connect failed");
 
-$number = $_POST['number'];
-$title = $_POST['title'];
-$content = $_POST['content'];
+$number = htmlentities($_POST['number'],ENT_QUOTES);
+$title = htmlentities($_POST['title'],ENT_QUOTES);
+$content = htmlentities($_POST['content'],ENT_QUOTES);
 
 $date = date('Y-m-d H:i:s');
 
