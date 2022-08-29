@@ -5,8 +5,8 @@
 $connect = mysqli_connect("localhost", "team-h", "Dnjswndbf3.14", "DB_BOARD") or die("fail");
 
                  
-$title = $_POST['title'];               
-$content = $_POST['content'];           
+$title = htmlentites($_POST['title']);               
+$content = htmlentites($_POST['content']);           
 $date = date('Y-m-d H:i:s');   
 
 
