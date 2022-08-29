@@ -4,7 +4,7 @@
         $connect = mysqli_connect('localhost','team-h','Dnjswndbf3.14','DB_BOARD') or die("fail");
 
         $id=htmlentities($_POST['id'],ENT_QUOTES);
-        $pw=htmlentites($_POST['pw'],ENT_QUOTES);
+        $pw=htmlentities($_POST['pw'],ENT_QUOTES);
 
 
         $query = "select * from member where id='$id'";
