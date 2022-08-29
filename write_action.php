@@ -1,4 +1,9 @@
 <?php
+
+<?php
+ini_set('display_errors', '0');
+?>
+
 $connect = mysqli_connect("localhost", "team-h", "Dnjswndbf3.14", "DB_BOARD") or die("fail");
 
                  
