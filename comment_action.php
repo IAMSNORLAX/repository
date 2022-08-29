@@ -14,7 +14,9 @@ $URL = './read.php?number='.$bno;
 $query = "INSERT INTO  comment (id, content, date, pw, com_num) 
         values('$id','$content','$date', '$pw','$bno')";
 
-
+<?php
+ini_set('display_errors', '0');
+?>
 
 
 $result = $connect->query($query);
