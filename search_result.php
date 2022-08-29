@@ -15,8 +15,8 @@
 <?php
  
   /* 검색 변수 */
-  $catagory = $_GET['catgo'];
-  $search_con = $_GET['search'];
+  $catagory = htmlentities($_GET['catgo']);
+  $search_con = htmlentities($_GET['search']);
 ?>
     <?php if($catagory=='title'){
         $catname = '제목';
