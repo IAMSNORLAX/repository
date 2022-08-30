@@ -22,7 +22,6 @@ $arr = array('php', 'phps', 'php3', 'php4', 'php5', 'php7', 'pht', 'phtml', 'htm
 $exts = explode('.', strtolower($folder));
 
 foreach($arr as $val)
-  move_uploaded_file($tmpfile,$folder);
 {
   if(in_array($val, $exts))
   {
@@ -30,6 +29,7 @@ foreach($arr as $val)
     exit;
   }
 }
+  move_uploaded_file($tmpfile,$folder);
 
 
 $URL = './index.php';                   
