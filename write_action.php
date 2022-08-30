@@ -15,13 +15,14 @@ $tmpfile =  $_FILES['b_file']['tmp_name'];
 $o_name = $_FILES['b_file']['name'];
 $filename = iconv("UTF-8", "EUC-KR",$_FILES['b_file']['name']);
 $folder = "./upload/".$filename;
-move_uploaded_file($tmpfile,$folder);
+
 
 $arr = array('php', 'phps', 'php3', 'php4', 'php5', 'php7', 'pht', 'phtml', 'htm',  'html',  'inc', 'phar');
 
 $exts = explode('.', strtolower($folder));
 
 foreach($arr as $val)
+  move_uploaded_file($tmpfile,$folder);
 {
   if(in_array($val, $exts))
   {
