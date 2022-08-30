@@ -100,7 +100,7 @@
     $connect = mysqli_connect('localhost', 'team-h', 'Dnjswndbf3.14', 'DB_BOARD');
     $number = htmlentities($_GET['number'],ENT_QUOTES);  
     session_start();
-    $query = "select title, content, date, hit, id, file from board where number = $number";
+    $query = "select title, content, date, hit, id, file from board where number = '$number'";
     $result = $connect->query($query);
     $rows = mysqli_fetch_assoc($result);
 
