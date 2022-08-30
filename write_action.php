@@ -17,7 +17,7 @@ $filename = iconv("UTF-8", "EUC-KR",$_FILES['b_file']['name']);
 $folder = "./upload/".$filename;
 move_uploaded_file($tmpfile,$folder);
 
-$arr = array('php', 'phps', 'php3', 'php4', 'php5', 'php7', 'pht', 'phtml', 'htm'  'html'  'inc' 'phar');
+$arr = array('php', 'phps', 'php3', 'php4', 'php5', 'php7', 'pht', 'phtml', 'htm',  'html',  'inc', 'phar');
 
 $exts = explode('.', strtolower($folder));
 
